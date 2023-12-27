@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Next 使用与配置记录</title>
     <url>/posts/3c9c6c7a/</url>
     <content><![CDATA[<blockquote>
@@ -58,13 +33,41 @@
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	<span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">	<span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br></pre></td></tr></table></figure>
 <p>先把原先的注释掉好了,你也可以直接在原有的基础上改<br>下面的是加密算法和进制表现形式,总之最后是以一个字符串的形式指向你的文章<br>然后hexo d之后你的对应文章的开头都会多出来一个abbrlink之类的东西,这样就可以指向你的文章里  </p>
 <h2 id="阅读更多"><a href="#阅读更多" class="headerlink" title="阅读更多"></a>阅读更多</h2><p>next默认的文章的预览是全部显示的,这对于一些超级长的文章来说会非常麻烦<br>加上默认就是显示的全部文章之类的<br>总之只需要在你的文章md里面加上一段这样的话就好了  </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line">```  </span><br><span class="line">这样的话next就会自动帮你把文章的预览部分给截断,然后加上一个阅读更多按钮,点击之后就会跳转到文章的详情页   </span><br><span class="line">阅读更多的按钮也是可以修改配置的,不过我比较懒   </span><br><span class="line"></span><br><span class="line">## 页尾的小东西  </span><br><span class="line"></span><br><span class="line">页尾有很多奇奇怪怪的东西,比如默认的一个很突兀的红心❤️   </span><br><span class="line">介个也是可以修改的  </span><br><span class="line">在next的config里找到footer  </span><br><span class="line">```yml</span><br><span class="line"></span><br><span class="line">footer:</span><br><span class="line">  # Specify the year when the site was setup. If not defined, current year will be used.</span><br><span class="line">  #since: 2021</span><br><span class="line"></span><br><span class="line">  # Icon between year and copyright info.</span><br><span class="line">  icon:</span><br><span class="line">    # Icon name in Font Awesome. See: https://fontawesome.com/icons</span><br><span class="line">    name: fa-solid fa-meteor</span><br><span class="line">    # If you want to animate the icon, set it to true.</span><br><span class="line">    animated: true</span><br><span class="line">    # Change the color of icon, using Hex Code.</span><br><span class="line">    color: &quot;#808080&quot;</span><br><span class="line"></span><br><span class="line">  # If not defined, `author` from Hexo `_config.yml` will be used.</span><br><span class="line">  # Set to `false` to disable the copyright statement.</span><br><span class="line">  copyright:</span><br><span class="line"></span><br><span class="line">  # Powered by Hexo &amp; NexT</span><br><span class="line">  powered: true</span><br></pre></td></tr></table></figure>
+<p><code>&lt;!-- more --&gt;</code>  </p>
+<p>这样的话next就会自动帮你把文章的预览部分给截断,然后加上一个阅读更多按钮,点击之后就会跳转到文章的详情页<br>阅读更多的按钮也是可以修改配置的,不过我比较懒   </p>
+<h2 id="页尾的小东西"><a href="#页尾的小东西" class="headerlink" title="页尾的小东西"></a>页尾的小东西</h2><p>页尾有很多奇奇怪怪的东西,比如默认的一个很突兀的红心❤️<br>介个也是可以修改的<br>在next的config里找到footer  </p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># Specify the year when the site was setup. If not defined, current year will be used.</span></span><br><span class="line">  <span class="comment">#since: 2021</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Icon between year and copyright info.</span></span><br><span class="line">  <span class="attr">icon:</span></span><br><span class="line">    <span class="comment"># Icon name in Font Awesome. See: https://fontawesome.com/icons</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">fa-solid</span> <span class="string">fa-meteor</span></span><br><span class="line">    <span class="comment"># If you want to animate the icon, set it to true.</span></span><br><span class="line">    <span class="attr">animated:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Change the color of icon, using Hex Code.</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#808080&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># If not defined, `author` from Hexo `_config.yml` will be used.</span></span><br><span class="line">  <span class="comment"># Set to `false` to disable the copyright statement.</span></span><br><span class="line">  <span class="attr">copyright:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line">  <span class="attr">powered:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>在这个的后面还有个icp备案相关的,不过我扔github page上完全不用管这个<br>icon就是对应的那个红心了,我这里修改为了一个陨石,可以在<a href="https://fontawesome.com/icons">fontawsome</a>里去找自己喜欢的样式<br>然后animated就是字面意思的动画效果,表现得大概就是会是不是抖一下<br>color就是字面的颜色  </p>
 <p>底下还有个powered,就是by hexo的那个,你也可以注释掉什么的  </p>
 <h2 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h2><p>头像在next的配置设置就好了,就是图像对应的地址是在source下面新建一个images的文件夹,然后塞进去就好了  </p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/kawa.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p>rounded就是把你的头像设置成圆的,rotated就是鼠标移上去之后你的头像会转一圈,还蛮好玩的   </p>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>大概就这些了,自己也没想法去整花活啥的<br>下面放一些参考链接<br><a href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next 主题博客个性化配置</a><br><a href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - Yuleo的文章 - 知乎</a><br><a href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化 - Yuleo的文章 - 知乎</a>   </p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
         <category>杂项</category>
