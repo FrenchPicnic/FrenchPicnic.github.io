@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023年终总结</title>
     <url>/posts/c262e439/</url>
     <content><![CDATA[<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><p>大摸特摸的一年！<br>具体写的时候已经过了24年了,不过都是对一年的总结了也没什么关系     </p>
@@ -119,7 +94,7 @@
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/kawa.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p>rounded就是把你的头像设置成圆的,rotated就是鼠标移上去之后你的头像会转一圈,还蛮好玩的   </p>
 <p>还有自己的<code>description</code>啥的,需要换行的话用<code>&lt;br&gt;</code>  </p>
-<h2 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h2><p>被一些博客骗了(其实也不算,搜索引擎的锅)<br>按照教程装了下<code>hexo-generator-index-pin-top</code>然后把hexo自带的<code>hexo-generator-index</code>给卸载了<br>瞅了下这仓库居然是6年前更新的了,对于一个置顶的需求hexo不可能搁置这么久不放的<br>果然<a href="https://github.com/hexojs/hexo-generator-index/pull/51">3年前</a>自带的就支持使用<code>sticky</code>来实现置顶的功能了,还有个自带的订书针图标<br>和top的用法一样,在文章首页那一堆东西里加上<code>sticky:xx</code>就可以了,xx越大越靠前<br>top还是能使用,只是太老了不维护了,一些官方的新特性都没有了  </p>
+<h2 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h2><p>被一些博客骗了(其实也不算,搜索引擎的锅)<br>按照教程装了下<code>hexo-generator-index-pin-top</code>然后把hexo自带的<code>hexo-generator-index</code>给卸载了<br>瞅了下这仓库居然是6年前更新的了,对于一个置顶的需求hexo不可能搁置这么久不放的<br><a href="https://github.com/hexojs/hexo-generator-index/pull/51">3年前</a>自带的就支持使用<code>sticky</code>来实现置顶的功能了,还有个自带的订书针图标<br>和top的用法一样,在文章首页那一堆东西里加上<code>sticky:xx</code>就可以了,xx越大越靠前<br>top还是能使用,只是太老了不维护了,一些官方的新特性都没有了  </p>
 <h2 id="加密插件"><a href="#加密插件" class="headerlink" title="加密插件"></a>加密插件</h2><p>hexo没有wordpress那些简单的加密方式,之前搜的时候也看到直接加一段js实现对文章的加密,不过过于暴力加上是明文写在代码里判断加密的,所以没啥用<br>然后有一个加密的插件<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>可以更好地实现对文章的加密<br>因为用了多种方式来确保安全性(去看README吧),总之除非愿意花很长时间一般是解密不了的<br>同时我的一键github deploy扔到的github page上的源码里也是加密的,因此不太需要担心托管到静态页面的时候因为源代码需要公开导致加密没用<br>使用的话先<code>npm install --save hexo-blog-encrypt</code><br>然后在<code>_config.yml</code>里加上下面的东西  </p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span> <span class="comment"># 这里可以自定义提示信息,就是外面看的预览啥的</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span> <span class="comment"># 输入密码部分的自定义消息</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码A</span>&#125; <span class="comment"># 对于指定的tag,都会使用对应的密码进行加密</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码B</span>&#125; <span class="comment"># 测试了下是按照tag顺序进行加密的,因此不会有多个tag导致加密冲突的情况</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">xray</span> <span class="comment"># 主题  </span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span> <span class="comment"># 错误密码的时候的报错</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span> <span class="comment"># 官方说这是很极端的情况下才会出现的报错,希腊奶了  </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -128,21 +103,6 @@
 <p>上面的config里还有一个theme的选项,可以自己去找喜欢的加密条  </p>
 <p>同时官方说了解密后是吧密码直接塞本地的,所以后台更改密码后进入原来的加密文章会先报一次错误然后回到输入密码的部分  </p>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>大概就这些了,自己也没想法去整花活啥的<br>下面放一些参考链接<br><a href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next 主题博客个性化配置</a><br><a href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - Yuleo的文章 - 知乎</a><br><a href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化 - Yuleo的文章 - 知乎</a>   </p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Test</title>
-    <url>/posts/784dd132/</url>
-    <content><![CDATA[<h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><p>这是一篇测试用的博客</p>
-<span id="more"></span>
-<p>看看github+hexo成功了没  </p>
-<p><del>已经成功了啦</del></p>
 ]]></content>
       <categories>
         <category>杂项</category>
@@ -176,6 +136,21 @@
       <tags>
         <tag>学习</tag>
         <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test</title>
+    <url>/posts/784dd132/</url>
+    <content><![CDATA[<h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><p>这是一篇测试用的博客</p>
+<span id="more"></span>
+<p>看看github+hexo成功了没  </p>
+<p><del>已经成功了啦</del></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
 </search>
