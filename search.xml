@@ -112,6 +112,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+
+<p>这篇文章是Next学习的后续，所以我忽略一些大条件(配置啥的)了<br>主要是一直用vscode写文章也没那么方便，有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件，最后就用obs了   </p>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>需要解决的基本就几个问题</p>
+<ul>
+<li>插件安装</li>
+<li>hexo文件预览</li>
+<li>git push</li>
+<li>模板编写</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Test</title>
     <url>/posts/784dd132/</url>
     <content><![CDATA[<h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><p>这是一篇测试用的博客</p>
