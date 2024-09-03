@@ -44,6 +44,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+
+<p>这篇文章是Next学习的后续，所以忽略一些大条件(配置啥的)了<br>主要是一直用vscode写文章也没那么方便，有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件，最后就试试obs了   </p>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>注意到默认情况下只会用到source里的内容，可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去，甚至只留个source都行<br>不过需要用到模板，就顺便保留<code>scaffolds</code>了  </p>
+<p>剩下需要解决的基本就几个问题</p>
+<ul>
+<li>hexo文件预览</li>
+<li>git push</li>
+<li>模板编写</li>
+</ul>
+<h4 id="puzzlesolved"><a href="#puzzlesolved" class="headerlink" title="puzzlesolved"></a>puzzlesolved</h4><p>前两个基本是一个问题了<br>平常用vsc写博客的话预览和发布都是要输命令的，obs没自带的终端来执行命令<br>所以需要下一个第三方插件<code>Shell commands</code>， 加上我是Windows环境，下完插件后新建两个命令就好了  </p>
+<p>用来预览的</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>用来自动发布Git的</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了  </p>
+<p>遗留的问题是开启4000预览后没命令手动关闭，虽然有动态修改但还是很膈应，关obs就好了<br>以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话，就用<code>Obsidian GIT</code>插件自己提交就好了</p>
+<h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦，要么起个终端写一个<br>要么曲线救国，在设置里把<code>scaffolds</code>放到模板里去，然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去，就可以一键生成了  </p>
+<p>唯一的问题就是标题得手动打一次，一些设置也需要手动改，和vsc也没差了  </p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能，可以稍微帮助一点</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next 使用与配置记录</title>
     <url>/posts/3c9c6c7a/</url>
     <content><![CDATA[<blockquote>
@@ -109,86 +147,6 @@
       </categories>
       <tags>
         <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Obsidian+HEXO配置博客</title>
-    <url>/posts/4dcd95ef/</url>
-    <content><![CDATA[<blockquote>
-<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
-</blockquote>
-<span id="more"></span>
-
-<p>这篇文章是Next学习的后续，所以忽略一些大条件(配置啥的)了<br>主要是一直用vscode写文章也没那么方便，有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件，最后就试试obs了   </p>
-<p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>注意到默认情况下只会用到source里的内容，可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去，甚至只留个source都行<br>不过需要用到模板，就顺便保留<code>scaffolds</code>了  </p>
-<p>剩下需要解决的基本就几个问题</p>
-<ul>
-<li>hexo文件预览</li>
-<li>git push</li>
-<li>模板编写</li>
-</ul>
-<h4 id="puzzlesolved"><a href="#puzzlesolved" class="headerlink" title="puzzlesolved"></a>puzzlesolved</h4><p>前两个基本是一个问题了<br>平常用vsc写博客的话预览和发布都是要输命令的，obs没自带的终端来执行命令<br>所以需要下一个第三方插件<code>Shell commands</code>， 加上我是Windows环境，下完插件后新建两个命令就好了  </p>
-<p>用来预览的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>用来自动发布Git的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了  </p>
-<p>遗留的问题是开启4000预览后没命令手动关闭，虽然有动态修改但还是很膈应，关obs就好了<br>以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话，就用<code>Obsidian GIT</code>插件自己提交就好了</p>
-<h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦，要么起个终端写一个<br>要么曲线救国，在设置里把<code>scaffolds</code>放到模板里去，然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去，就可以一键生成了  </p>
-<p>唯一的问题就是标题得手动打一次，一些设置也需要手动改，和vsc也没差了  </p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能，可以稍微帮助一点</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Test</title>
-    <url>/posts/784dd132/</url>
-    <content><![CDATA[<h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><p>这是一篇测试用的博客</p>
-<span id="more"></span>
-<p>看看github+hexo成功了没  </p>
-<p><del>已经成功了啦</del></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>虚拟主机白嫖使用记录</title>
-    <url>/posts/4dffec70/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码不太对的样子,不知道的话再试下去你也会烦的" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="5fb5c6050239ffb73f6dd3086a2e8c2ce36b5223e11aadb4a28a25d0444320f7">4630436162ade97ba2718b7d0c4b3b63d28f4f8957eafc94ae2cbc2b30196447f0690b7cad6060d9da557975bbf32a2ecdf248ab378a4a2640d3d6d357c25d25d5bd79482f6ac2c557b76d2922b4e5e7e87915567a158ffbb36d3d3001bf7f977ca74ddd1f7ca85115859888ce3651d8e9ea4976e90208852c68b418715e8683a382f76441c7737978881db445ab2f381b40b8abd04562639696038f7c3c72244a568dc67c0933e75192aed4f3027fdf27b0f29257b173d0b47d69190569ecc02d3fedbb909b97b587066790a54e218edfd93e110651e079c094148cf06cb1d846378488cbff64869a4153ae6f500d7b0d8687bca082e57359afe3a7ef733aef734831322b50f2b3862b9a8bf4edd128905d2ebd1e27cb1bbe25b7e04e3ee98f</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">这里需要密码才能查看喔</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>test</tag>
       </tags>
   </entry>
 </search>
