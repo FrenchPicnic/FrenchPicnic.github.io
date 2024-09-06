@@ -3,10 +3,46 @@
   <entry>
     <title>神必小笔记</title>
     <url>/posts/7094f7c2/</url>
-    <content><![CDATA[<h3 id="2024-09-05"><a href="#2024-09-05" class="headerlink" title="2024-09-05"></a>2024-09-05</h3><p>想试着下更新hexo和next的时候提示npm可以更新了,然后去更新npm<br>结果先是淘宝的源炸了,然后是<a href="https://github.com/coreybutler/nvm-windows/issues/984">nvm报错</a><code>panic: runtime error: index out of range [3] with length 3</code><br>总之又折腾了下nvm的更新,然后发现没有直接更新的办法,最后试了curl和wget都不行只有覆盖安装了<br>太久没写前端或者node导致的  </p>
+    <content><![CDATA[<h3 id="2024-09-05"><a href="#2024-09-05" class="headerlink" title="2024-09-05"></a>2024-09-05</h3><p>想试着下更新hexo和next的时候提示npm可以更新了,然后去更新npm<br>结果先是淘宝的源炸了,然后是<a href="https://github.com/coreybutler/nvm-windows/issues/984">nvm报错</a><code>panic: runtime error: index out of range [3] with length 3</code><br>总之又折腾了下nvm的更新,然后发现没有直接更新的办法,最后试了curl和wget都不行只有覆盖安装了<br>太久没写前端或者node导致的<br>2024&#x2F;09&#x2F;06 update: ?今天用hexo的时候炸了,最后发现是环境变量没了,但是昨天更新完还能用啊  </p>
+<h3 id="2024-09-06"><a href="#2024-09-06" class="headerlink" title="2024-09-06"></a>2024-09-06</h3><p>今天打算炸的是python,主要氵群的时候看到他们在聊一些编程语言,PL人真的好可怕<br>总之先拿conda里的试手了,conda支持命令一键更新的<br><code>conda update python</code><br>不过搜到的说是只会更新到3.x.y的y最新版本,不会更新x,需要在执行一次才行,但我怕环境炸了就只执行了一次<br>然后http err了<br>不过又跑了一次最后到3.11.9了,不是预期的3.12<br>之后拿本地的更新,但是直接安装的木有找到pip直接更新的指令<del>被一键部署惯坏的新一代cs人</del><br>最后先导出requirements然后直接卸载安装了,又又发现不支持直接下载旧版的库,犯蠢了<br>因为本地没有太多重要的库,干脆手动下载了  </p>
+<p>总结还是go和rust这种一键更新自带包管理器的更新好多了<br>或者是我姿势不对吧   </p>
 ]]></content>
       <categories>
         <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+
+<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了  </p>
+<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件,最后就试试obs了   </p>
+<h4 id="基本的"><a href="#基本的" class="headerlink" title="基本的"></a>基本的</h4><p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br>不过需要用到模板,就顺便保留<code>scaffolds</code>了  </p>
+<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br>所以需要下一个第三方插件<code>Shell commands</code>, 加上我是Windows环境,下完插件后新建两个命令就好了  </p>
+<p>用来预览的</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>用来自动发布Git的</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了  </p>
+<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br>以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了  </p>
+<p>用obs比vscode的优势大概就是</p>
+<h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br>要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去,就可以一键生成了  </p>
+<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了  </p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+        <category>学习</category>
       </categories>
       <tags>
         <tag>学习</tag>
@@ -114,44 +150,13 @@
 <p>abrstract会被自己写的description覆盖掉<br>然后加密后的文章是不支持重新显示toc(侧边栏目录)了,一些数学公式也不太支持,对于依赖这部分的博客不太友好   </p>
 <p>上面的config里还有一个theme的选项,可以自己去找喜欢的加密条  </p>
 <p>同时官方说了解密后是吧密码直接塞本地的,所以后台更改密码后进入原来的加密文章会先报一次错误然后回到输入密码的部分  </p>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>找官方的特性找的东西,就这个<a href="https://theme-next.js.org/docs/tag-plugins/note">https://theme-next.js.org/docs/tag-plugins/note</a><br>大概效果可以参考收藏页面  </p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bootstrap callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bootstrap callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">flat</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>style默认是simple,默认带图标,modern和flat都是不带图标的,flat的背景色浅一些,modern的背景色深一些<br>把icons设成true的话这两个也会带了<br>最后的light_bg_offset是背景色的偏移量,默认是0,看喜好了  </p>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>大概就这些了,自己也没想法去整花活啥的<br>下面放一些参考链接<br><a href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next 主题博客个性化配置</a><br><a href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - Yuleo的文章 - 知乎</a><br><a href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化 - Yuleo的文章 - 知乎</a>   </p>
 ]]></content>
       <categories>
         <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Obsidian+HEXO配置博客</title>
-    <url>/posts/4dcd95ef/</url>
-    <content><![CDATA[<blockquote>
-<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
-</blockquote>
-<span id="more"></span>
-
-<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了  </p>
-<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件,最后就试试obs了   </p>
-<h4 id="基本的"><a href="#基本的" class="headerlink" title="基本的"></a>基本的</h4><p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br>不过需要用到模板,就顺便保留<code>scaffolds</code>了  </p>
-<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br>所以需要下一个第三方插件<code>Shell commands</code>, 加上我是Windows环境,下完插件后新建两个命令就好了  </p>
-<p>用来预览的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>用来自动发布Git的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了  </p>
-<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br>以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了  </p>
-<p>用obs比vscode的优势大概就是</p>
-<h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br>要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去,就可以一键生成了  </p>
-<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了  </p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-        <category>学习</category>
       </categories>
       <tags>
         <tag>学习</tag>
