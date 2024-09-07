@@ -159,7 +159,7 @@
 <p>用obs比vscode的优势大概就是</p>
 <h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br>要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去,就可以一键生成了  </p>
 <p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了  </p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点</p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br>TODO: <a href="https://publish.obsidian.md/shellcommands/Preactions/Prompts">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
 ]]></content>
       <categories>
         <category>杂项</category>
