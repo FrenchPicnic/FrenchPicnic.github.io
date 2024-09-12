@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>FrenchPicnic&#39;s Nothing Life</title>
+  <icon>http://frenchpicnic.github.io/icon.png</icon>
+  <subtitle>Life is meaningless</subtitle>
+  <link href="http://frenchpicnic.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://frenchpicnic.github.io/"/>
+  <updated>2024-09-06T19:59:56.545Z</updated>
+  <id>http://frenchpicnic.github.io/</id>
+  
+  <author>
+    <name>FrenchPicnic</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>神必小笔记</title>
+    <link href="http://frenchpicnic.github.io/posts/7094f7c2/"/>
+    <id>http://frenchpicnic.github.io/posts/7094f7c2/</id>
+    <published>2024-09-05T10:16:10.000Z</published>
+    <updated>2024-09-06T19:59:56.545Z</updated>
+    
+    
+    <summary type="html">一些神必的小笔记,主要是内容不够氵一篇或者临时问题</summary>
+    
+    
+    
+    <category term="杂项" scheme="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="学习" scheme="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <link href="http://frenchpicnic.github.io/posts/4dcd95ef/"/>
+    <id>http://frenchpicnic.github.io/posts/4dcd95ef/</id>
+    <published>2024-07-12T08:58:29.000Z</published>
+    <updated>2024-09-07T08:31:27.190Z</updated>
+    
+    
+    <summary type="html">捡起来博客云云</summary>
+    
+    
+    
+    <category term="杂项" scheme="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    <category term="学习" scheme="http://frenchpicnic.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023年终总结</title>
+    <link href="http://frenchpicnic.github.io/posts/c262e439/"/>
+    <id>http://frenchpicnic.github.io/posts/c262e439/</id>
+    <published>2023-12-30T19:07:26.000Z</published>
+    <updated>2024-09-05T10:21:02.029Z</updated>
+    
+    
+    <summary type="html">又是大摸特摸的一年啊</summary>
+    
+    
+    
+    <category term="日常" scheme="http://frenchpicnic.github.io/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="日常" scheme="http://frenchpicnic.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Next 使用与配置记录</title>
+    <link href="http://frenchpicnic.github.io/posts/3c9c6c7a/"/>
+    <id>http://frenchpicnic.github.io/posts/3c9c6c7a/</id>
+    <published>2023-12-26T06:35:31.000Z</published>
+    <updated>2024-09-06T22:02:21.817Z</updated>
+    
+    
+    <summary type="html">本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文</summary>
+    
+    
+    
+    <category term="杂项" scheme="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="学习" scheme="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>

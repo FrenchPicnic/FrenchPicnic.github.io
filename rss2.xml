@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FrenchPicnic&#39;s Nothing Life</title>
+    <link>http://frenchpicnic.github.io/</link>
+    
+    <image>
+      <url>http://frenchpicnic.github.io/icon.png</url>
+      <title>FrenchPicnic&#39;s Nothing Life</title>
+      <link>http://frenchpicnic.github.io/</link>
+    </image>
+    
+    <atom:link href="http://frenchpicnic.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>There&#39;s no undo &lt;br&gt; and there&#39;s no repeat &lt;br&gt; Can&#39;t go back to &lt;br&gt; how we used to be</description>
+    <pubDate>Fri, 06 Sep 2024 19:59:56 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>神必小笔记</title>
+      <link>http://frenchpicnic.github.io/posts/7094f7c2/</link>
+      <guid>http://frenchpicnic.github.io/posts/7094f7c2/</guid>
+      <pubDate>Thu, 05 Sep 2024 10:16:10 GMT</pubDate>
+      
+      <description>一些神必的小笔记,主要是内容不够氵一篇或者临时问题</description>
+      
+      
+      
+      
+      <category domain="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/">杂项</category>
+      
+      
+      <category domain="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <comments>http://frenchpicnic.github.io/posts/7094f7c2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Obsidian+HEXO配置博客</title>
+      <link>http://frenchpicnic.github.io/posts/4dcd95ef/</link>
+      <guid>http://frenchpicnic.github.io/posts/4dcd95ef/</guid>
+      <pubDate>Fri, 12 Jul 2024 08:58:29 GMT</pubDate>
+      
+      <description>捡起来博客云云</description>
+      
+      
+      
+      
+      <category domain="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/">杂项</category>
+      
+      <category domain="http://frenchpicnic.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <category domain="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <comments>http://frenchpicnic.github.io/posts/4dcd95ef/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>2023年终总结</title>
+      <link>http://frenchpicnic.github.io/posts/c262e439/</link>
+      <guid>http://frenchpicnic.github.io/posts/c262e439/</guid>
+      <pubDate>Sat, 30 Dec 2023 19:07:26 GMT</pubDate>
+      
+      <description>又是大摸特摸的一年啊</description>
+      
+      
+      
+      
+      <category domain="http://frenchpicnic.github.io/categories/%E6%97%A5%E5%B8%B8/">日常</category>
+      
+      
+      <category domain="http://frenchpicnic.github.io/tags/%E6%97%A5%E5%B8%B8/">日常</category>
+      
+      
+      <comments>http://frenchpicnic.github.io/posts/c262e439/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Next 使用与配置记录</title>
+      <link>http://frenchpicnic.github.io/posts/3c9c6c7a/</link>
+      <guid>http://frenchpicnic.github.io/posts/3c9c6c7a/</guid>
+      <pubDate>Tue, 26 Dec 2023 06:35:31 GMT</pubDate>
+      
+      <description>本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文</description>
+      
+      
+      
+      
+      <category domain="http://frenchpicnic.github.io/categories/%E6%9D%82%E9%A1%B9/">杂项</category>
+      
+      
+      <category domain="http://frenchpicnic.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <comments>http://frenchpicnic.github.io/posts/3c9c6c7a/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
