@@ -15,8 +15,25 @@
     <atom:link href="http://frenchpicnic.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>There&#39;s no undo &lt;br&gt; and there&#39;s no repeat &lt;br&gt; Can&#39;t go back to &lt;br&gt; how we used to be</description>
-    <pubDate>Fri, 06 Sep 2024 19:59:56 GMT</pubDate>
+    <pubDate>Sat, 28 Sep 2024 14:05:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>测试</title>
+      <link>http://frenchpicnic.github.io/posts/9daba997/</link>
+      <guid>http://frenchpicnic.github.io/posts/9daba997/</guid>
+      <pubDate>Sat, 28 Sep 2024 14:04:53 GMT</pubDate>
+      
+      <description>测试推送</description>
+      
+      
+      
+      
+      
+      
+      <comments>http://frenchpicnic.github.io/posts/9daba997/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>神必小笔记</title>

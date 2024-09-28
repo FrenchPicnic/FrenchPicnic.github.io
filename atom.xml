@@ -6,7 +6,7 @@
   <link href="http://frenchpicnic.github.io/atom.xml" rel="self"/>
   
   <link href="http://frenchpicnic.github.io/"/>
-  <updated>2024-09-06T19:59:56.545Z</updated>
+  <updated>2024-09-28T14:05:12.813Z</updated>
   <id>http://frenchpicnic.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://frenchpicnic.github.io/posts/9daba997/"/>
+    <id>http://frenchpicnic.github.io/posts/9daba997/</id>
+    <published>2024-09-28T14:04:53.000Z</published>
+    <updated>2024-09-28T14:05:12.813Z</updated>
+    
+    
+    <summary type="html">测试推送</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>神必小笔记</title>
