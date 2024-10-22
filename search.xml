@@ -3,9 +3,26 @@
   <entry>
     <title>神必小笔记</title>
     <url>/posts/7094f7c2/</url>
-    <content><![CDATA[<h3 id="2024-09-05"><a href="#2024-09-05" class="headerlink" title="2024-09-05"></a>2024-09-05</h3><p>想试着下更新hexo和next的时候提示npm可以更新了,然后去更新npm<br>结果先是淘宝的源炸了,然后是<a href="https://github.com/coreybutler/nvm-windows/issues/984">nvm报错</a><code>panic: runtime error: index out of range [3] with length 3</code><br>总之又折腾了下nvm的更新,然后发现没有直接更新的办法,最后试了curl和wget都不行只有覆盖安装了<br>太久没写前端或者node导致的<br>2024&#x2F;09&#x2F;06 update: ?今天用hexo的时候炸了,最后发现是环境变量没了,但是昨天更新完还能用啊  </p>
-<h3 id="2024-09-06"><a href="#2024-09-06" class="headerlink" title="2024-09-06"></a>2024-09-06</h3><p>今天打算炸的是python,主要氵群的时候看到他们在聊一些编程语言,PL人真的好可怕<br>总之先拿conda里的试手了,conda支持命令一键更新的<br><code>conda update python</code><br>不过搜到的说是只会更新到3.x.y的y最新版本,不会更新x,需要在执行一次才行,但我怕环境炸了就只执行了一次<br>然后http err了<br>不过又跑了一次最后到3.11.9了,不是预期的3.12<br>之后拿本地的更新,但是直接安装的木有找到pip直接更新的指令<del>被一键部署惯坏的新一代cs人</del><br>最后先导出requirements然后直接卸载安装了,又又发现不支持直接下载旧版的库,犯蠢了<br>因为本地没有太多重要的库,干脆手动下载了  </p>
-<p>总结还是go和rust这种一键更新自带包管理器的更新好多了<br>或者是我姿势不对吧   </p>
+    <content><![CDATA[<h3 id="section">2024-09-05</h3>
+<p>想试着下更新hexo和next的时候提示npm可以更新了,然后去更新npm<br />
+结果先是淘宝的源炸了,然后是<a
+href="https://github.com/coreybutler/nvm-windows/issues/984">nvm报错</a><code>panic: runtime error: index out of range [3] with length 3</code><br />
+总之又折腾了下nvm的更新,然后发现没有直接更新的办法,最后试了curl和wget都不行只有覆盖安装了<br />
+太久没写前端或者node导致的<br />
+2024/09/06 update:
+?今天用hexo的时候炸了,最后发现是环境变量没了,但是昨天更新完还能用啊</p>
+<h3 id="section-1">2024-09-06</h3>
+<p>今天打算炸的是python,主要氵群的时候看到他们在聊一些编程语言,PL人真的好可怕<br />
+总之先拿conda里的试手了,conda支持命令一键更新的<br />
+<code>conda update python</code><br />
+不过搜到的说是只会更新到3.x.y的y最新版本,不会更新x,需要在执行一次才行,但我怕环境炸了就只执行了一次<br />
+然后http err了<br />
+不过又跑了一次最后到3.11.9了,不是预期的3.12<br />
+之后拿本地的更新,但是直接安装的木有找到pip直接更新的指令<del>被一键部署惯坏的新一代cs人</del><br />
+最后先导出requirements然后直接卸载安装了,又又发现不支持直接下载旧版的库,犯蠢了<br />
+因为本地没有太多重要的库,干脆手动下载了</p>
+<p>总结还是go和rust这种一键更新自带包管理器的更新好多了<br />
+或者是我姿势不对吧</p>
 ]]></content>
       <categories>
         <category>杂项</category>
@@ -17,38 +34,131 @@
   <entry>
     <title>2023年终总结</title>
     <url>/posts/c262e439/</url>
-    <content><![CDATA[<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><p>大摸特摸的一年！<br>具体写的时候已经过了24年了,不过都是对一年的总结了也没什么关系     </p>
-<p>写之前参考了不少人的文章(简而言之就是边摸鱼边抄了不少博客X)  </p>
-<p>最后还是用月份的形式比较好<br>加之去年对自己也没做太多的约束什么的,所以其实也没太多好回顾的    </p>
-<!-- 施工中的[里版](frenchpicnic.github.io/posts/448ae7b9) -->  
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=150 src="//music.163.com/outchain/player?type=2&id=2061480&auto=0&height=86">名字的来源</iframe>
- 
-
-<h2 id="January"><a href="#January" class="headerlink" title="January"></a>January</h2><p>在窗外的烟花声和自己耳机里的纯音乐里,敲着代码迎来了2023<br>感觉没有以前那么对跨年热衷了<br>最后代码交上去过几天考核也通过了,成功加了一个大一就想进的社团<del>算是完成了夙愿了</del><br>经历了一些事物的消失,认识了一个新的朋友,在之后的一年里对自己有了很大的精神帮助<br>回老家过了个无聊的年,硬拉着去看烟花认识亲戚什么的     </p>
-<h2 id="February"><a href="#February" class="headerlink" title="February"></a>February</h2><p>一个社团(以下以社团B代指)的备赛要求加上不是很想呆在家里,自己很早就润回学校了<br>呆在社团也是空虚的摸鱼,因为没给自己安排什么事情,不过总比在家里摸鱼还要被说好<br>之后就是开学报道准备考试之类的,和新舍友慢慢熟悉起来了<br>和半年断联的好友重新搭上了话,然后被骂了,一些插曲之后算是和好了<br>一月加的那个社团(以下以社团A代指)考试结束后开了个任务大会兼部门内第一次线下见面会之类的,正好逃了社团B的考勤<br>见到了很多大佬,还有尴尬的全体自我介绍,最后自己抢了个负责社团下一届招新的任务<br>开学的新鲜劲也过了,开始糜烂在宿舍里  </p>
-<h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><p>月初才算考完所有的试,但已经完全没精力了<br>社团A开了个全员大会,大概就是一些官话和数据还有代表发言之类的,这方面意外的正式<br>最后拍了个大合照,自己躲在很后面尽量不出镜<br>人还是没认全<br>后面自己没课的时候就经常跑到社团A那边去摸鱼了,因为社团B的备赛进度完全没进展,回宿舍又太摆烂了<br>换个地方摸鱼的感觉也不一样<br>经历了熬夜通宵还有玻璃爆炸的神奇事件,在月底做出了个影响后续的决定<br>然后过了一个很平淡的特殊的日子  </p>
-<h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><p>月初的时候开了个自己的小频道,随便塞了点东西和迷思进去,顺便学着别人开了个垃圾桶频道,倒些苦水<br>后来发现主频道更像是碎碎念,垃圾桶频道也不是苦水更多是迷思(草)<br>人员也慢慢发展到现在50个关注了,好感动<br>虽然大部分都是在x上认识的网络另一端的友人,但也挺好的  </p>
-<p>x也是这个时候开始沉迷(?),主要就是脸皮很厚的去回复一些东西,碎片化的聊天,意外的发现从一些人的圈子外围进到了小圈子里<br>好神奇  </p>
-<p>开始写一写自己社团A分到的招新任务了  </p>
-<h2 id="May"><a href="#May" class="headerlink" title="May"></a>May</h2><p>社团B五一放假了,自己就跑去和社团A的五一团建了<br><del>反正不要我的钱</del><br>虽然去的地方一言难尽,最后甚至在走山路,至少是个各种意义上难忘的回忆了<br>次的烧烤,也没吃饱<br>回去的车上正好睡着了,错过了大合照,完美  </p>
-<p>社团B抽时间开了个赛季动员大会,不过都没留下来多少新面孔了,悲观态度<br>然后就是期中考试和一些半学期结课的考试之类的,很无聊的复习和预习  </p>
-<p>社团A的任务第一版算是完成了,不过commit全是瞎写的,后面被说的好惨<br>除了天气开始慢慢转热外也没什么事了,自己还是披着冲锋衣到处跑  </p>
-<h2 id="June"><a href="#June" class="headerlink" title="June"></a>June</h2><p>大部分的课开始走向尾声了,一遍应付大作业一遍开始思考些东西<br>社团B接着开了次动员大会,然后大部分的主力都跑去干活了——虽然就几天<br>自己还是能摸鱼就摸鱼,待在那边社团也学了下软件开发啥的<br>社团A把主群迁移出来了个水群让我们氵,每天水群成了自己的生活动力之一——然后小而美的存储直线上升了<br>这才知道不清理的小而美真的好大,之前自己都是几个月重装一次的<br>然后很多聊天记录也没了,怎么就不能学学QQ(虽然也是本地存储)   </p>
-<p>月中考完之后就一直待在社团B了,舍友也没回去待在学校复习了一段时间  </p>
-<h2 id="July"><a href="#July" class="headerlink" title="July"></a>July</h2><p>月初的时候就和社团B去比赛了<br>今年是第一次换地方比赛,去年又是线上赛,前辈也走的七七八八了,所以我们这届是第一次去线下比赛加换地方的神奇buff<br>备赛期间发生了不少离谱的事情,自己也EMO了好几次,频道里也吐槽了好多<br>最后结果也不尽人意,大家也有反思<br>之后回来就在帮社团C干活了,每天去按时看前辈操作顺便帮帮忙什么的,也终于和一位一直想聊天(?)的大佬有了对话的地方  </p>
-<p>社团A那边自己的任务也在慢慢结项,和其他人对接然后测试啥的,等下个月的上线  </p>
-<p>月底的时候家里实在催了所以还是回去了,寒假不太喜欢呆家里暑假倒是可以,不过要回来还是会回的  </p>
-<h2 id="August"><a href="#August" class="headerlink" title="August"></a>August</h2><p>月初就宅在家里腐烂,快下旬的时候就跑回学校了,帮社团A招新和去帮下社团C之类的<br>然后还要改bug,免得出一堆问题<br>招新果然是一件很好玩的事情(指看别人面试和被面试)<br>说是面试就是简单的交流一下了<br>还有去各个宿舍宣传,学校专门组织的社团展上宣传,很多很多<br>这时候也开始对社团里的很多人熟识了,至少从一开始的脸都不认识到能对得上脸知道是社团的了<br>线上社团的坏处  </p>
-<p>舍友也很早回了,晚上就睡宿舍<br>没早八也要早八起的感觉好神奇<br>招新期间发生了很多神奇的事情,不管是各种各样的新生还是和同辈一起摸鱼的感觉  </p>
-<h2 id="September"><a href="#September" class="headerlink" title="September"></a>September</h2><p>社团A的招新开始接近尾声了,新的一个学年也正式开始了<br>之前社团B的备赛缓考了一堆课,开学直接排满了<br>一遍复习然后和好友吃吃喝喝<br>大概是现实过于充满了,所以淡了点x那边的样子<br>人到都还记得七七八八就是了<br>社团B的招新也结束了,不过今年换了技术栈,大部分和我同届的也都跑路了<br>我就边听培训边验收下作业,帮帮忙啥的<br>人倒是挺多的,不过都会像往届一样慢慢的走掉吧  </p>
-<h2 id="October"><a href="#October" class="headerlink" title="October"></a>October</h2><p>在社团B待了几天国庆后(社团内都叫上班了)就跑社团A那边去摸鱼了,发觉我完全忘了社团C<br>国庆期间社团C都去比赛了,看别人发的返图赛场的氛围确实不一样,可惜没拿到很理想的成绩<br>国庆结束之后突然觉得很EMO,和社团B请了一周的假——虽然我本来就不做啥事就是了<br>一周的时间就基本宅宿舍里了,偶尔去下社团A<br>之后发生了件改变人生的大事,就和社团B那边请了个超长的假,基本就是说自己退社了<br>不过那边培训也到尾声了,待着也没太多事干了<br>人也走的只剩下20来个了,aiai    </p>
+    <content><![CDATA[<h1 id="section">2023</h1>
+<p>大摸特摸的一年！<br />
+具体写的时候已经过了24年了,不过都是对一年的总结了也没什么关系</p>
+<p>写之前参考了不少人的文章(简而言之就是边摸鱼边抄了不少博客X)</p>
+<p>最后还是用月份的形式比较好<br />
+加之去年对自己也没做太多的约束什么的,所以其实也没太多好回顾的</p>
+<!-- 施工中的[里版](frenchpicnic.github.io/posts/448ae7b9) -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="550" height="150" src="//music.163.com/outchain/player?type=2&amp;id=2061480&amp;auto=0&amp;height=86">
+名字的来源
+</iframe>
+<h2 id="january">January</h2>
+<p>在窗外的烟花声和自己耳机里的纯音乐里,敲着代码迎来了2023<br />
+感觉没有以前那么对跨年热衷了<br />
+最后代码交上去过几天考核也通过了,成功加了一个大一就想进的社团<del>算是完成了夙愿了</del><br />
+经历了一些事物的消失,认识了一个新的朋友,在之后的一年里对自己有了很大的精神帮助<br />
+回老家过了个无聊的年,硬拉着去看烟花认识亲戚什么的</p>
+<h2 id="february">February</h2>
+<p>一个社团(以下以社团B代指)的备赛要求加上不是很想呆在家里,自己很早就润回学校了<br />
+呆在社团也是空虚的摸鱼,因为没给自己安排什么事情,不过总比在家里摸鱼还要被说好<br />
+之后就是开学报道准备考试之类的,和新舍友慢慢熟悉起来了<br />
+和半年断联的好友重新搭上了话,然后被骂了,一些插曲之后算是和好了<br />
+一月加的那个社团(以下以社团A代指)考试结束后开了个任务大会兼部门内第一次线下见面会之类的,正好逃了社团B的考勤<br />
+见到了很多大佬,还有尴尬的全体自我介绍,最后自己抢了个负责社团下一届招新的任务<br />
+开学的新鲜劲也过了,开始糜烂在宿舍里</p>
+<h2 id="march">March</h2>
+<p>月初才算考完所有的试,但已经完全没精力了<br />
+社团A开了个全员大会,大概就是一些官话和数据还有代表发言之类的,这方面意外的正式<br />
+最后拍了个大合照,自己躲在很后面尽量不出镜<br />
+人还是没认全<br />
+后面自己没课的时候就经常跑到社团A那边去摸鱼了,因为社团B的备赛进度完全没进展,回宿舍又太摆烂了<br />
+换个地方摸鱼的感觉也不一样<br />
+经历了熬夜通宵还有玻璃爆炸的神奇事件,在月底做出了个影响后续的决定<br />
+然后过了一个很平淡的特殊的日子</p>
+<h2 id="april">April</h2>
+<p>月初的时候开了个自己的小频道,随便塞了点东西和迷思进去,顺便学着别人开了个垃圾桶频道,倒些苦水<br />
+后来发现主频道更像是碎碎念,垃圾桶频道也不是苦水更多是迷思(草)<br />
+人员也慢慢发展到现在50个关注了,好感动<br />
+虽然大部分都是在x上认识的网络另一端的友人,但也挺好的</p>
+<p>x也是这个时候开始沉迷(?),主要就是脸皮很厚的去回复一些东西,碎片化的聊天,意外的发现从一些人的圈子外围进到了小圈子里<br />
+好神奇</p>
+<p>开始写一写自己社团A分到的招新任务了</p>
+<h2 id="may">May</h2>
+<p>社团B五一放假了,自己就跑去和社团A的五一团建了<br />
+<del>反正不要我的钱</del><br />
+虽然去的地方一言难尽,最后甚至在走山路,至少是个各种意义上难忘的回忆了<br />
+次的烧烤,也没吃饱<br />
+回去的车上正好睡着了,错过了大合照,完美</p>
+<p>社团B抽时间开了个赛季动员大会,不过都没留下来多少新面孔了,悲观态度<br />
+然后就是期中考试和一些半学期结课的考试之类的,很无聊的复习和预习</p>
+<p>社团A的任务第一版算是完成了,不过commit全是瞎写的,后面被说的好惨<br />
+除了天气开始慢慢转热外也没什么事了,自己还是披着冲锋衣到处跑</p>
+<h2 id="june">June</h2>
+<p>大部分的课开始走向尾声了,一遍应付大作业一遍开始思考些东西<br />
+社团B接着开了次动员大会,然后大部分的主力都跑去干活了——虽然就几天<br />
+自己还是能摸鱼就摸鱼,待在那边社团也学了下软件开发啥的<br />
+社团A把主群迁移出来了个水群让我们氵,每天水群成了自己的生活动力之一——然后小而美的存储直线上升了<br />
+这才知道不清理的小而美真的好大,之前自己都是几个月重装一次的<br />
+然后很多聊天记录也没了,怎么就不能学学QQ(虽然也是本地存储)</p>
+<p>月中考完之后就一直待在社团B了,舍友也没回去待在学校复习了一段时间</p>
+<h2 id="july">July</h2>
+<p>月初的时候就和社团B去比赛了
+今年是第一次换地方比赛,去年又是线上赛,前辈也走的七七八八了,所以我们这届是第一次去线下比赛加换地方的神奇buff<br />
+备赛期间发生了不少离谱的事情,自己也EMO了好几次,频道里也吐槽了好多<br />
+最后结果也不尽人意,大家也有反思<br />
+之后回来就在帮社团C干活了,每天去按时看前辈操作顺便帮帮忙什么的,也终于和一位一直想聊天(?)的大佬有了对话的地方</p>
+<p>社团A那边自己的任务也在慢慢结项,和其他人对接然后测试啥的,等下个月的上线</p>
+<p>月底的时候家里实在催了所以还是回去了,寒假不太喜欢呆家里暑假倒是可以,不过要回来还是会回的</p>
+<h2 id="august">August</h2>
+<p>月初就宅在家里腐烂,快下旬的时候就跑回学校了,帮社团A招新和去帮下社团C之类的<br />
+然后还要改bug,免得出一堆问题<br />
+招新果然是一件很好玩的事情(指看别人面试和被面试)<br />
+说是面试就是简单的交流一下了<br />
+还有去各个宿舍宣传,学校专门组织的社团展上宣传,很多很多<br />
+这时候也开始对社团里的很多人熟识了,至少从一开始的脸都不认识到能对得上脸知道是社团的了<br />
+线上社团的坏处</p>
+<p>舍友也很早回了,晚上就睡宿舍<br />
+没早八也要早八起的感觉好神奇<br />
+招新期间发生了很多神奇的事情,不管是各种各样的新生还是和同辈一起摸鱼的感觉</p>
+<h2 id="september">September</h2>
+<p>社团A的招新开始接近尾声了,新的一个学年也正式开始了<br />
+之前社团B的备赛缓考了一堆课,开学直接排满了<br />
+一遍复习然后和好友吃吃喝喝<br />
+大概是现实过于充满了,所以淡了点x那边的样子<br />
+人到都还记得七七八八就是了<br />
+社团B的招新也结束了,不过今年换了技术栈,大部分和我同届的也都跑路了<br />
+我就边听培训边验收下作业,帮帮忙啥的<br />
+人倒是挺多的,不过都会像往届一样慢慢的走掉吧</p>
+<h2 id="october">October</h2>
+<p>在社团B待了几天国庆后(社团内都叫上班了)就跑社团A那边去摸鱼了,发觉我完全忘了社团C<br />
+国庆期间社团C都去比赛了,看别人发的返图赛场的氛围确实不一样,可惜没拿到很理想的成绩<br />
+国庆结束之后突然觉得很EMO,和社团B请了一周的假——虽然我本来就不做啥事就是了<br />
+一周的时间就基本宅宿舍里了,偶尔去下社团A<br />
+之后发生了件改变人生的大事,就和社团B那边请了个超长的假,基本就是说自己退社了<br />
+不过那边培训也到尾声了,待着也没太多事干了<br />
+人也走的只剩下20来个了,aiai</p>
 <p><del>不过这个大事到现在也没和人说</del></p>
-<h2 id="November"><a href="#November" class="headerlink" title="November"></a>November</h2><p>摸鱼的一个月<br>哪边都没我什么事,每天不是宅宿舍就是往社团跑<br>被同辈锐评活的像是大四了<br>不过又没结课期中也没有大作业的,确实没啥事干<br>大概就是成功的蹭了一顿饭加上社团A的培训全部结束了吧  </p>
-<h2 id="December"><a href="#December" class="headerlink" title="December"></a>December</h2><p>把博客重新捡起来了写了点东西<br>加固现实的联系ing,然后回来发现网络上的联系越来越微弱了<br>频道也因为10月中的事情断更了,垃圾桶里倒是不停的无意义发言<br>社团A组织了次好玩的活动,把新面孔都认了一轮<br>然后抽到了条围巾(草),从来没带过这玩意啊<br>开始焦虑害怕未来,加上考试期末周,究极作息不规律的一个月<br>最后待在社团A里什么都没做的迎来了2024    </p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结?"></a>总结?</h1><p>写完发现自己完全没啥私人生活的感觉<br>每天不是在这边社团那边社团就是宅宿舍或者上课,不过我也确实是没啥出去玩的想法的neet<br>对自己来说是认识很多很多人的一年?今年认识的人有超过之前的几年里认识的人<br>大部分都算是好下来了  </p>
-<p>芝士技术方面完全0进展,除了写任务的时候有那么一点点的提升之外就没做啥了,大部分时候都是对着电脑发呆<br>成为了赛博面点大师,熟练使用摸摸抱抱拍拍ruarua安安来烹饪可口的网友面包<br>口癖慢慢的变成了双叠词(草),然后带坏了一些人的样子  </p>
-<h1 id="展望"><a href="#展望" class="headerlink" title="展望?"></a>展望?</h1><p>希腊奶,可能会补一个TODOlist,不过按照某人的习惯最后还是会鸽掉的吧<br>最大的期望大概是,新的一年里还是不要做一个无聊的大人吧<br>多一点学习啥的<br>博客尽量不要鸽了  </p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>Happy 2024!</p>
+<h2 id="november">November</h2>
+<p>摸鱼的一个月<br />
+哪边都没我什么事,每天不是宅宿舍就是往社团跑<br />
+被同辈锐评活的像是大四了<br />
+不过又没结课期中也没有大作业的,确实没啥事干<br />
+大概就是成功的蹭了一顿饭加上社团A的培训全部结束了吧</p>
+<h2 id="december">December</h2>
+<p>把博客重新捡起来了写了点东西<br />
+加固现实的联系ing,然后回来发现网络上的联系越来越微弱了<br />
+频道也因为10月中的事情断更了,垃圾桶里倒是不停的无意义发言<br />
+社团A组织了次好玩的活动,把新面孔都认了一轮<br />
+然后抽到了条围巾(草),从来没带过这玩意啊<br />
+开始焦虑害怕未来,加上考试期末周,究极作息不规律的一个月<br />
+最后待在社团A里什么都没做的迎来了2024</p>
+<h1 id="总结">总结?</h1>
+<p>写完发现自己完全没啥私人生活的感觉<br />
+每天不是在这边社团那边社团就是宅宿舍或者上课,不过我也确实是没啥出去玩的想法的neet<br />
+对自己来说是认识很多很多人的一年?今年认识的人有超过之前的几年里认识的人<br />
+大部分都算是好下来了</p>
+<p>芝士技术方面完全0进展,除了写任务的时候有那么一点点的提升之外就没做啥了,大部分时候都是对着电脑发呆<br />
+成为了赛博面点大师,熟练使用摸摸抱抱拍拍ruarua安安来烹饪可口的网友面包<br />
+口癖慢慢的变成了双叠词(草),然后带坏了一些人的样子</p>
+<h1 id="展望">展望?</h1>
+<p>希腊奶,可能会补一个TODOlist,不过按照某人的习惯最后还是会鸽掉的吧<br />
+最大的期望大概是,新的一年里还是不要做一个无聊的大人吧<br />
+多一点学习啥的<br />
+博客尽量不要鸽了</p>
+<h1 id="end">END</h1>
+<p>Happy 2024!</p>
 ]]></content>
       <categories>
         <category>日常</category>
@@ -61,78 +171,169 @@
     <title>Next 使用与配置记录</title>
     <url>/posts/3c9c6c7a/</url>
     <content><![CDATA[<blockquote>
-<p>最近重新把博客捡起来了,准备随便写点什么东西,然后照着几个大佬的博客想整一个类似看着比较简洁的<br>最后主题市场逛了一圈还是用了Next,然后发现是和学校的老旧不更新的ACM校队博客用的同一个风格<br>主要记录下自己的相关配置啥的  </p>
+<p>最近重新把博客捡起来了,准备随便写点什么东西,然后照着几个大佬的博客想整一个类似看着比较简洁的<br />
+最后主题市场逛了一圈还是用了Next,然后发现是和学校的老旧不更新的ACM校队博客用的同一个风格<br />
+主要记录下自己的相关配置啥的</p>
 </blockquote>
-<p>本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文  </p>
-<span id="more"></span>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>hexo的安装就不提了,相关教程实在是太多了<br>只看官方文档也可以很快的上手<br>我用的还是github page的一键部署,很多都没那么麻烦  </p>
-<p><a href="https://github.com/next-theme/hexo-theme-next">Next</a>的仓库里说了对于5.0以上的版本可以直接使用<code>npm install hexo-theme-next</code>安装<br>记得在自己本地的hexo仓库里安装,大概是需要的    </p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>配置也很简单,<del>官方文档里也有</del>只需要把<code>_config.yml</code>下面的<code>theme</code>改成<code>next</code>就可以了  </p>
-<p>然后再<code>hexo s</code>就会发现你本地启动的不再是默认的landscape主题了(虽然那个头图超级好看的)<br>同时next官方推荐使用备用配置来进行基础的next主题配置,而不是修改node_modules中的next相关配置<br><a href="https://theme-next.js.org/docs/getting-started/configuration#Usage">Next的相关文档</a><br>粽子如果是使用npm的直接执行对应的指令就好了,这样的话你的博客仓库文件夹的最外面就会多出来一个<code>_config.next.yml</code><br>里面也塞了很多的next默认配置,只需要对里面的东西进行修改就会对next的全局配置产生影响了  </p>
-<h2 id="修改默认的首页"><a href="#修改默认的首页" class="headerlink" title="修改默认的首页"></a>修改默认的首页</h2><p>一般hexo的默认标题就是hexo,相关作者是一个叫<a href="https://en.wikipedia.org/wiki/John_Doe">John Doe</a>的人(搜了下才知道是无名氏的意思,大概类似于小明?)<br>修改这个只需要在<code>_config.yml</code>下面的site部分进行修改  </p>
+<p>本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文<br />
+<span id="more"></span> # 安装</p>
+<p>hexo的安装就不提了,相关教程实在是太多了<br />
+只看官方文档也可以很快的上手<br />
+我用的还是github page的一键部署,很多都没那么麻烦</p>
+<p><a
+href="https://github.com/next-theme/hexo-theme-next">Next</a>的仓库里说了对于5.0以上的版本可以直接使用<code>npm install hexo-theme-next</code>安装<br />
+记得在自己本地的hexo仓库里安装,大概是需要的</p>
+<h1 id="配置">配置</h1>
+<p>配置也很简单,<del>官方文档里也有</del>只需要把<code>_config.yml</code>下面的<code>theme</code>改成<code>next</code>就可以了</p>
+<p>然后再<code>hexo s</code>就会发现你本地启动的不再是默认的landscape主题了(虽然那个头图超级好看的)<br />
+同时next官方推荐使用备用配置来进行基础的next主题配置,而不是修改node_modules中的next相关配置<br />
+<a
+href="https://theme-next.js.org/docs/getting-started/configuration#Usage">Next的相关文档</a><br />
+粽子如果是使用npm的直接执行对应的指令就好了,这样的话你的博客仓库文件夹的最外面就会多出来一个<code>_config.next.yml</code><br />
+里面也塞了很多的next默认配置,只需要对里面的东西进行修改就会对next的全局配置产生影响了</p>
+<h2 id="修改默认的首页">修改默认的首页</h2>
+<p>一般hexo的默认标题就是hexo,相关作者是一个叫<a
+href="https://en.wikipedia.org/wiki/John_Doe">John
+Doe</a>的人(搜了下才知道是无名氏的意思,大概类似于小明?)<br />
+修改这个只需要在<code>_config.yml</code>下面的site部分进行修改</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">FrenchPicnic&#x27;s</span> <span class="string">Nothing</span> <span class="string">Life</span>  <span class="comment"># 主标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span>                        <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span>                     <span class="comment"># 描述</span></span><br><span class="line"><span class="attr">keywords:</span>                           <span class="comment"># 一些关键词</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">FrenchPicnic</span>                <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>                     <span class="comment"># 翻译的语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>                        <span class="comment"># 使用的时区,不填默认是根据部署的服务器确定的</span></span><br></pre></td></tr></table></figure>
-
-<p>说一下language,默认是en,结果修改为zh后发现变成了个奇怪的语言<br>最后发现是要改成<code>zh-CN</code>,和其他地方的配置有点出入  </p>
-<h2 id="修改next的主题"><a href="#修改next的主题" class="headerlink" title="修改next的主题"></a>修改next的主题</h2><p>next一共提供了4种风格的页面,可以进行切换,在<code>_config.next.yml</code>中进行修改<br>之后对于next部分的修改,都在<code>_config.next.yml</code>中进行修改,<del>懒得打字了</del><br>找到Schemes  </p>
+<p>说一下language,默认是en,结果修改为zh后发现变成了个奇怪的语言<br />
+最后发现是要改成<code>zh-CN</code>,和其他地方的配置有点出入</p>
+<h2 id="修改next的主题">修改next的主题</h2>
+<p>next一共提供了4种风格的页面,可以进行切换,在<code>_config.next.yml</code>中进行修改<br />
+之后对于next部分的修改,都在<code>_config.next.yml</code>中进行修改,<del>懒得打字了</del><br />
+找到Schemes</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>想要切换到哪个类型的主题,只需要注释当前的主题然后把想要改为的主题取消注释就好了,我比较喜欢最后一个Gemini  </p>
-<h2 id="修改next的菜单栏"><a href="#修改next的菜单栏" class="headerlink" title="修改next的菜单栏"></a>修改next的菜单栏</h2><p>找到menu的部分进行修改就好了  </p>
+<p>想要切换到哪个类型的主题,只需要注释当前的主题然后把想要改为的主题取消注释就好了,我比较喜欢最后一个Gemini</p>
+<h2 id="修改next的菜单栏">修改next的菜单栏</h2>
+<p>找到menu的部分进行修改就好了</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Menu Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="comment"># External url should start with http:// or https://</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line">  <span class="string">友链:</span> <span class="string">/links/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-link</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>menu一共支持三个参数,<code>Key: /link/ || icon</code></p>
-<ul>
-<li>key是你的菜单项的名字,如果翻译存在,则使用翻译,否则使用key,key是大小写敏感的</li>
-<li>value是菜单项的链接,代表了点击后跳转的位置,如果是本地跳转的话需要在source文件夹下创建对应的文件夹与对应的index.md文件,如果是外部跳转的话,需要以http:&#x2F;&#x2F;或者https:&#x2F;&#x2F;开头</li>
-<li>value后面的<code>||</code>跟着的是菜单项的图标,图标可以不写,不写则使用默认的图标,图标的使用可以参考<a href="https://fontawesome.com/">Font Awesome</a></li>
-</ul>
-<p>默认给了一些配置,例如about&#x2F;tags&#x2F;categories&#x2F;archives<br>默认的所有文章都会被分到archives里面去,对于其他的文件,需要在每一个的开头加上<code>type:&quot;xxxx&quot;</code>指明是一个对应菜单类型的文件<br>特别地,对于tags&#x2F;categories,我们里面不需要写东西,只需要在每篇自己写的文章——即<code>source/_posts</code>下面的文章的开头加入下面的样式就可以了  </p>
+<p>menu一共支持三个参数,<code>Key: /link/ || icon</code> -
+key是你的菜单项的名字,如果翻译存在,则使用翻译,否则使用key,key是大小写敏感的
+-
+value是菜单项的链接,代表了点击后跳转的位置,如果是本地跳转的话需要在source文件夹下创建对应的文件夹与对应的index.md文件,如果是外部跳转的话,需要以http://或者https://开头
+-
+value后面的<code>||</code>跟着的是菜单项的图标,图标可以不写,不写则使用默认的图标,图标的使用可以参考<a
+href="https://fontawesome.com/">Font Awesome</a></p>
+<p>默认给了一些配置,例如about/tags/categories/archives<br />
+默认的所有文章都会被分到archives里面去,对于其他的文件,需要在每一个的开头加上<code>type:"xxxx"</code>指明是一个对应菜单类型的文件<br />
+特别地,对于tags/categories,我们里面不需要写东西,只需要在每篇自己写的文章——即<code>source/_posts</code>下面的文章的开头加入下面的样式就可以了</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">abbrlink:</span> <span class="string">4a17b156</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">学习</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">杂项</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<p>官方也给出了json的写法,不过感觉yml更方便点<br>只需要在tags&#x2F;categories的后面加一个<code>- xxx</code>就好了,注意是大小写敏感的,在建立好这些之后,你的标签&#x2F;分类页面就会自动生成对应的标签,点击跳转后会是一个时间轴的形式<br>不过不知道其他主题是怎么实现的  </p>
-<p>about页面则不会自动生成,需要你自己写一点东西进去,一般随便写点话就好了<br>Next在菜单栏提供了一定的友链,但很明显一般友链都会超多菜单栏很明显放不下<br>这时候就需要自定义菜单栏了<br>例如我给出的例子里的最后面的友链,指定好名字后(一般都不会翻译,所以直接写中文就好了)就可以按照其他的配置方式写了<br>在source文件夹下新建一个links的文件夹,里面是index.md<br>然后和about一样随便塞点东西进去<br>友联相关的模板挺多的,可以自己去看点好看的  </p>
-<h2 id="标题的配置"><a href="#标题的配置" class="headerlink" title="标题的配置"></a>标题的配置</h2><p>hexo默认的路径就是文章的时间加标题,这样阅读你的文章的时候的导航栏看起来就会超级冗杂<br>hexo的插件市场里有一个叫做<code>abbrlink</code>的插件,可以帮你生成一个字段来指向你的文章,这样看起来文章就很舒服了<br>执行这个命令之后<code>npm install hexo-abbrlink --save</code><br>然后在hexo的config中找到<code>permalink</code>把对应的改成下面的</p>
+<p>官方也给出了json的写法,不过感觉yml更方便点<br />
+只需要在tags/categories的后面加一个<code>- xxx</code>就好了,注意是大小写敏感的,在建立好这些之后,你的标签/分类页面就会自动生成对应的标签,点击跳转后会是一个时间轴的形式<br />
+不过不知道其他主题是怎么实现的</p>
+<p>about页面则不会自动生成,需要你自己写一点东西进去,一般随便写点话就好了<br />
+Next在菜单栏提供了一定的友链,但很明显一般友链都会超多菜单栏很明显放不下<br />
+这时候就需要自定义菜单栏了<br />
+例如我给出的例子里的最后面的友链,指定好名字后(一般都不会翻译,所以直接写中文就好了)就可以按照其他的配置方式写了<br />
+在source文件夹下新建一个links的文件夹,里面是index.md<br />
+然后和about一样随便塞点东西进去<br />
+友联相关的模板挺多的,可以自己去看点好看的</p>
+<h2 id="标题的配置">标题的配置</h2>
+<p>hexo默认的路径就是文章的时间加标题,这样阅读你的文章的时候的导航栏看起来就会超级冗杂<br />
+hexo的插件市场里有一个叫做<code>abbrlink</code>的插件,可以帮你生成一个字段来指向你的文章,这样看起来文章就很舒服了<br />
+执行这个命令之后<code>npm install hexo-abbrlink --save</code><br />
+然后在hexo的config中找到<code>permalink</code>把对应的改成下面的</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	<span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">	<span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br></pre></td></tr></table></figure>
-
-<p>先把原先的注释掉,你也可以直接在原有的基础上改<br>下面的是加密算法和进制表现形式,总之最后是以一个字符串的形式指向你的文章<br>然后hexo d之后你的对应文章的开头都会多出来一个abbrlink之类的东西,这样就可以指向你的文章里  </p>
-<h2 id="阅读更多"><a href="#阅读更多" class="headerlink" title="阅读更多"></a>阅读更多</h2><p>next默认的文章的预览是全部显示的,这对于一些超级长的文章来说会非常麻烦<br>加上默认就是显示的全部文章之类的<br>总之只需要在你的文章md里面加上一段这样的话就好了  </p>
-<p><code>&lt;!-- more --&gt;</code>  </p>
-<p>这样的话next就会自动帮你把文章的预览部分给截断,然后加上一个阅读更多按钮,点击之后就会跳转到文章的详情页<br>阅读更多的按钮也是可以修改配置的,不过我比较懒   </p>
-<p>或者正常的在页首那一堆东西里使用<code>description</code>来描述,不过大部分时候都会忘记要写这个了  </p>
-<h2 id="页尾的小东西"><a href="#页尾的小东西" class="headerlink" title="页尾的小东西"></a>页尾的小东西</h2><p>页尾有很多奇奇怪怪的东西,比如默认的一个很突兀的红心❤️<br>介个也是可以修改的<br>在next的config里找到footer  </p>
+<p>先把原先的注释掉,你也可以直接在原有的基础上改<br />
+下面的是加密算法和进制表现形式,总之最后是以一个字符串的形式指向你的文章<br />
+然后hexo
+d之后你的对应文章的开头都会多出来一个abbrlink之类的东西,这样就可以指向你的文章里</p>
+<h2 id="阅读更多">阅读更多</h2>
+<p>next默认的文章的预览是全部显示的,这对于一些超级长的文章来说会非常麻烦<br />
+加上默认就是显示的全部文章之类的<br />
+总之只需要在你的文章md里面加上一段这样的话就好了</p>
+<p><code>&lt;!-- more --&gt;</code></p>
+<p>这样的话next就会自动帮你把文章的预览部分给截断,然后加上一个阅读更多按钮,点击之后就会跳转到文章的详情页<br />
+阅读更多的按钮也是可以修改配置的,不过我比较懒</p>
+<p>或者正常的在页首那一堆东西里使用<code>description</code>来描述,不过大部分时候都会忘记要写这个了</p>
+<h2 id="页尾的小东西">页尾的小东西</h2>
+<p>页尾有很多奇奇怪怪的东西,比如默认的一个很突兀的红心❤️<br />
+介个也是可以修改的<br />
+在next的config里找到footer</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># Specify the year when the site was setup. If not defined, current year will be used.</span></span><br><span class="line">  <span class="comment">#since: 2021</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Icon between year and copyright info.</span></span><br><span class="line">  <span class="attr">icon:</span></span><br><span class="line">    <span class="comment"># Icon name in Font Awesome. See: https://fontawesome.com/icons</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">fa-solid</span> <span class="string">fa-meteor</span></span><br><span class="line">    <span class="comment"># If you want to animate the icon, set it to true.</span></span><br><span class="line">    <span class="attr">animated:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Change the color of icon, using Hex Code.</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#808080&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># If not defined, `author` from Hexo `_config.yml` will be used.</span></span><br><span class="line">  <span class="comment"># Set to `false` to disable the copyright statement.</span></span><br><span class="line">  <span class="attr">copyright:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line">  <span class="attr">powered:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>在这个的后面还有个icp备案相关的,不过我扔github page上完全不用管这个<br>icon就是对应的那个红心了,我这里修改为了一个陨石,可以在<a href="https://fontawesome.com/icons">fontawsome</a>里去找自己喜欢的样式<br>然后animated就是字面意思的动画效果,表现得大概就是会是不是抖一下<br>color就是字面的颜色  </p>
-<p>底下还有个powered,就是by hexo的那个,你也可以注释掉什么的  </p>
-<h2 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h2><p>头像在next的配置设置就好了,就是图像对应的地址是在source下面新建一个images的文件夹,然后塞进去就好  </p>
+<p>在这个的后面还有个icp备案相关的,不过我扔github
+page上完全不用管这个<br />
+icon就是对应的那个红心了,我这里修改为了一个陨石,可以在<a
+href="https://fontawesome.com/icons">fontawsome</a>里去找自己喜欢的样式<br />
+然后animated就是字面意思的动画效果,表现得大概就是会是不是抖一下<br />
+color就是字面的颜色</p>
+<p>底下还有个powered,就是by hexo的那个,你也可以注释掉什么的</p>
+<h2 id="头像">头像</h2>
+<p>头像在next的配置设置就好了,就是图像对应的地址是在source下面新建一个images的文件夹,然后塞进去就好</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/kawa.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p>rounded就是把你的头像设置成圆的,rotated就是鼠标移上去之后你的头像会转一圈,还蛮好玩的   </p>
-<p>还有自己的<code>description</code>啥的,需要换行的话用<code>&lt;br&gt;</code>  </p>
-<h2 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h2><p>被一些博客骗了(其实也不算,搜索引擎的锅)<br>按照教程装了下<code>hexo-generator-index-pin-top</code>然后把hexo自带的<code>hexo-generator-index</code>给卸载了<br>瞅了下这仓库居然是6年前更新的了,对于一个置顶的需求hexo不可能搁置这么久不放的<br><a href="https://github.com/hexojs/hexo-generator-index/pull/51">3年前</a>自带的就支持使用<code>sticky</code>来实现置顶的功能了,还有个自带的订书针图标<br>和top的用法一样,在文章首页那一堆东西里加上<code>sticky:xx</code>就可以了,xx越大越靠前<br>top还是能使用,只是太老了不维护了,一些官方的新特性都没有了  </p>
-<h2 id="加密插件"><a href="#加密插件" class="headerlink" title="加密插件"></a>加密插件</h2><p>hexo没有wordpress那些简单的加密方式,之前搜的时候也看到直接加一段js实现对文章的加密,不过过于暴力加上是明文写在代码里判断加密的,所以没啥用<br>然后有一个加密的插件<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>可以更好地实现对文章的加密<br>因为用了多种方式来确保安全性(去看README吧),总之除非愿意花很长时间一般是解密不了的<br>同时我的一键github deploy扔到的github page上的源码里也是加密的,因此不太需要担心托管到静态页面的时候因为源代码需要公开导致加密没用<br>使用的话先<code>npm install --save hexo-blog-encrypt</code><br>然后在<code>_config.yml</code>里加上下面的东西  </p>
+<p>rounded就是把你的头像设置成圆的,rotated就是鼠标移上去之后你的头像会转一圈,还蛮好玩的</p>
+<p>还有自己的<code>description</code>啥的,需要换行的话用<code>&lt;br&gt;</code></p>
+<h2 id="文章置顶">文章置顶</h2>
+<p>被一些博客骗了(其实也不算,搜索引擎的锅)<br />
+按照教程装了下<code>hexo-generator-index-pin-top</code>然后把hexo自带的<code>hexo-generator-index</code>给卸载了<br />
+瞅了下这仓库居然是6年前更新的了,对于一个置顶的需求hexo不可能搁置这么久不放的<br />
+<a
+href="https://github.com/hexojs/hexo-generator-index/pull/51">3年前</a>自带的就支持使用<code>sticky</code>来实现置顶的功能了,还有个自带的订书针图标<br />
+和top的用法一样,在文章首页那一堆东西里加上<code>sticky:xx</code>就可以了,xx越大越靠前<br />
+top还是能使用,只是太老了不维护了,一些官方的新特性都没有了</p>
+<h2 id="加密插件">加密插件</h2>
+<p>hexo没有wordpress那些简单的加密方式,之前搜的时候也看到直接加一段js实现对文章的加密,不过过于暴力加上是明文写在代码里判断加密的,所以没啥用<br />
+然后有一个加密的插件<a
+href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>可以更好地实现对文章的加密<br />
+因为用了多种方式来确保安全性(去看README吧),总之除非愿意花很长时间一般是解密不了的<br />
+同时我的一键github deploy扔到的github
+page上的源码里也是加密的,因此不太需要担心托管到静态页面的时候因为源代码需要公开导致加密没用<br />
+使用的话先<code>npm install --save hexo-blog-encrypt</code><br />
+然后在<code>_config.yml</code>里加上下面的东西</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span> <span class="comment"># 这里可以自定义提示信息,就是外面看的预览啥的</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span> <span class="comment"># 输入密码部分的自定义消息</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码A</span>&#125; <span class="comment"># 对于指定的tag,都会使用对应的密码进行加密</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码B</span>&#125; <span class="comment"># 测试了下是按照tag顺序进行加密的,因此不会有多个tag导致加密冲突的情况</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">xray</span> <span class="comment"># 主题  </span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span> <span class="comment"># 错误密码的时候的报错</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span> <span class="comment"># 官方说这是很极端的情况下才会出现的报错,希腊奶了  </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>当然你的文章头也可以加这些东西,官方说了文章头的优先级大于config里的配置<br>然后就不是用tags来指定哪些tag的时候才加密了,而是直接使用password   </p>
-<p>abrstract会被自己写的description覆盖掉<br>然后加密后的文章是不支持重新显示toc(侧边栏目录)了,一些数学公式也不太支持,对于依赖这部分的博客不太友好   </p>
-<p>上面的config里还有一个theme的选项,可以自己去找喜欢的加密条  </p>
-<p>同时官方说了解密后是吧密码直接塞本地的,所以后台更改密码后进入原来的加密文章会先报一次错误然后回到输入密码的部分  </p>
-<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>找官方的特性找的东西,就这个<a href="https://theme-next.js.org/docs/tag-plugins/note">https://theme-next.js.org/docs/tag-plugins/note</a><br>大概效果可以参考收藏页面  </p>
+<p>当然你的文章头也可以加这些东西,官方说了文章头的优先级大于config里的配置<br />
+然后就不是用tags来指定哪些tag的时候才加密了,而是直接使用password</p>
+<p>abrstract会被自己写的description覆盖掉<br />
+然后加密后的文章是不支持重新显示toc(侧边栏目录)了,一些数学公式也不太支持,对于依赖这部分的博客不太友好</p>
+<p>上面的config里还有一个theme的选项,可以自己去找喜欢的加密条</p>
+<p>同时官方说了解密后是吧密码直接塞本地的,所以后台更改密码后进入原来的加密文章会先报一次错误然后回到输入密码的部分</p>
+<h2 id="note">Note</h2>
+<p>找官方的特性找的东西,就这个<a
+href="https://theme-next.js.org/docs/tag-plugins/note"
+class="uri">https://theme-next.js.org/docs/tag-plugins/note</a><br />
+大概效果可以参考收藏页面<br />
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bootstrap callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bootstrap callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">flat</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>style默认是simple,默认带图标,modern和flat都是不带图标的,flat的背景色浅一些,modern的背景色深一些<br>把icons设成true的话这两个也会带了<br>最后的light_bg_offset是背景色的偏移量,默认是0,看喜好了  </p>
-<h2 id="comments"><a href="#comments" class="headerlink" title="comments"></a>comments</h2><p>评论官方内置只有那么几种<code>disqus | disqusjs | changyan | livere | gitalk | utterances</code><br>其中几种又是不支持githubpage的,所以只能用gitalk和utterances<br><del>怎么还有国内的评论站啊楽</del>  </p>
-<p>这两个都是基于github issue实现的,所以可能会对部分不太友好<br>gitalk参考官方用法,主要就是先新建一个<code>OAuth application</code>,然后<code>callback url</code>填博客地址<br>生成好之后就拿<code>client_id</code>和<code>client_secret</code>丢到<code>config.next.yml</code>里对应的部分就好了<br>如果不是githubpage的话就新建个仓库来对应  </p>
-<p>不过根据官方说法gitalk是基于文章的md5来对应的,所以一旦更改了文章之类的就会对不上,但issue还在<br>另一个问题就是gitalk会在你认证之后每个页面打开的时候就创建一个issue,很烦<br>然后就是权限问题,要的比较多,这个是搜别人博客提到的  </p>
-<p>utterances就是一个lite版本的了,不需要太多的权限也是专门由他的机器人来发第一个issue<br>配置很简单,只需要吧它装到对应仓库里就好了<a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a><br>也是在配置yml里填上对应的仓库啥的  </p>
-<p>其他的话,在不需要comment的页面的Front-matter部分加上下面的就好了</p>
+style默认是simple,默认带图标,modern和flat都是不带图标的,flat的背景色浅一些,modern的背景色深一些<br />
+把icons设成true的话这两个也会带了<br />
+最后的light_bg_offset是背景色的偏移量,默认是0,看喜好了</p>
+<h2 id="comments">comments</h2>
+<p>评论官方内置只有那么几种<code>disqus | disqusjs | changyan | livere | gitalk | utterances</code><br />
+其中几种又是不支持githubpage的,所以只能用gitalk和utterances<br />
+<del>怎么还有国内的评论站啊楽</del></p>
+<p>这两个都是基于github issue实现的,所以可能会对部分不太友好<br />
+gitalk参考官方用法,主要就是先新建一个<code>OAuth application</code>,然后<code>callback url</code>填博客地址<br />
+生成好之后就拿<code>client_id</code>和<code>client_secret</code>丢到<code>config.next.yml</code>里对应的部分就好了<br />
+如果不是githubpage的话就新建个仓库来对应</p>
+<p>不过根据官方说法gitalk是基于文章的md5来对应的,所以一旦更改了文章之类的就会对不上,但issue还在<br />
+另一个问题就是gitalk会在你认证之后每个页面打开的时候就创建一个issue,很烦<br />
+然后就是权限问题,要的比较多,这个是搜别人博客提到的</p>
+<p>utterances就是一个lite版本的了,不需要太多的权限也是专门由他的机器人来发第一个issue<br />
+配置很简单,只需要吧它装到对应仓库里就好了<a
+href="https://github.com/apps/utterances"
+class="uri">https://github.com/apps/utterances</a><br />
+也是在配置yml里填上对应的仓库啥的</p>
+<p>其他的话,在不需要comment的页面的Front-matter部分加上下面的就好了
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line"><span class="section">comments: false # 这一个</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-<p>另一个问题是它的issue是以describe或者more前面的内容来创建的,所以对那些友链之类的页面可能需要写一个describe来简略一下  </p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>大概就这些了,自己也没想法去整花活啥的<br>下面放一些参考链接<br><a href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next 主题博客个性化配置</a><br><a href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - Yuleo的文章 - 知乎</a><br><a href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化 - Yuleo的文章 - 知乎</a>   </p>
+另一个问题是它的issue是以describe或者more前面的内容来创建的,所以对那些友链之类的页面可能需要写一个describe来简略一下</p>
+<h1 id="end">END</h1>
+<p>大概就这些了,自己也没想法去整花活啥的<br />
+下面放一些参考链接<br />
+<a
+href="https://blog.csdn.net/as480133937/article/details/100138838">Hexo-Next
+主题博客个性化配置</a><br />
+<a
+href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）
+- Yuleo的文章 - 知乎</a><br />
+<a
+href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化
+- Yuleo的文章 - 知乎</a></p>
 ]]></content>
       <categories>
-        <category>杂项</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>学习</tag>
+        <tag>杂项</tag>
       </tags>
   </entry>
   <entry>
@@ -142,37 +343,41 @@
 <p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
 </blockquote>
 <span id="more"></span>
-
-<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了  </p>
-<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br>但typora也只适合用来写单文件,最后就试试obs了   </p>
-<h4 id="基本的"><a href="#基本的" class="headerlink" title="基本的"></a>基本的</h4><p>如果是第一次配置hexo的话还是使用终端方便点<br>配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br>注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br>不过需要用到模板,就顺便保留<code>scaffolds</code>了  </p>
-<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br>所以需要下一个第三方插件<code>Shell commands</code>, 加上我是Windows环境,下完插件后新建两个命令就好了  </p>
-<p>用来预览的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>用来自动发布Git的</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了  </p>
-<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br>以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了  </p>
+<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
+<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
+但typora也只适合用来写单文件,最后就试试obs了</p>
+<h4 id="基本的">基本的</h4>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br />
+配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
+注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
+不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
+<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
+所以需要下一个第三方插件<code>Shell commands</code>,
+加上我是Windows环境,下完插件后新建两个命令就好了</p>
+<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure></p>
+<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
+<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
+以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
 <p>用obs比vscode的优势大概就是</p>
-<h4 id="一些进阶"><a href="#一些进阶" class="headerlink" title="一些进阶"></a>一些进阶</h4><p>主要是在学<code>shell commands</code><br>原生Obs并没有提供直接执行终端命令的方法<br>所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br>要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br>或者把一般的文章放到日记里去,就可以一键生成了  </p>
-<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了  </p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br>TODO: <a href="https://publish.obsidian.md/shellcommands/Preactions/Prompts">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
+<h4 id="一些进阶">一些进阶</h4>
+<p>主要是在学<code>shell commands</code><br />
+原生Obs并没有提供直接执行终端命令的方法<br />
+所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
+要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
+或者把一般的文章放到日记里去,就可以一键生成了</p>
+<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
+TODO: <a
+href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
+class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
 ]]></content>
       <categories>
-        <category>杂项</category>
         <category>学习</category>
       </categories>
       <tags>
-        <tag>学习</tag>
+        <tag>杂项</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/posts/9daba997/</url>
-    <content><![CDATA[<p>测试更新</p>
-]]></content>
   </entry>
 </search>
