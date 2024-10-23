@@ -28,7 +28,7 @@
 <meta property="og:description" content="神秘字节青训营和ta的算法考核，虽然没啥大用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-22T19:12:16.000Z">
-<meta property="article:modified_time" content="2024-10-22T20:33:45.692Z">
+<meta property="article:modified_time" content="2024-10-23T13:22:49.665Z">
 <meta property="article:author" content="FrenchPicnic">
 <meta property="article:tag" content="OI">
 <meta name="twitter:card" content="summary">
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95"><span class="nav-number">1.</span> <span class="nav-text">简单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">输入描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.3.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95"><span class="nav-number">1.</span> <span class="nav-text">简单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E7%AD%89"><span class="nav-number">2.</span> <span class="nav-text">中等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%B0%E9%9A%BE"><span class="nav-number">3.</span> <span class="nav-text">困难</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -234,7 +234,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-10-23 03:12:16 / 修改时间：04:33:45" itemprop="dateCreated datePublished" datetime="2024-10-23T03:12:16+08:00">2024-10-23</time>
+      <time title="创建时间：2024-10-23 03:12:16 / 修改时间：21:22:49" itemprop="dateCreated datePublished" datetime="2024-10-23T03:12:16+08:00">2024-10-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -268,17 +268,18 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>想学前端就报了下，反正一大堆原题随便写写复健了<br />
-都是用go写的，严格来说没那么算法()</p>
+都是用go写的，严格来说没那么算法()<br />
+加上题目难度很神秘，感觉是字节在用来测试代码平台(什么ai时代下的牛马)<br />
+做完要求的就跑路了</p>
 <h2 id="简单">简单</h2>
 <details class="note info"><summary><p>计算从位置 x 到 y 的最少步数</p>
 </summary>
-<h3 id="问题描述">问题描述</h3>
-<p>小F正在进行一个 AB 实验，需要从整数位置 x 移动到整数位置
+<p><strong>问题描述</strong><br />
+小F正在进行一个 AB 实验，需要从整数位置 x 移动到整数位置
 y。每一步可以将当前位置增加或减少，且每步的增加或减少的值必须是连续的整数（即每步的移动范围是上一步的
 -1，+0 或 +1）。首末两步的步长必须是 1。求从 x 到 y 的最少步数。</p>
-<h3 id="输入描述">输入描述</h3>
-<p>输入包含两个整数 x 和 y，表示起始位置和目标位置。</p>
-<h3 id="思路">思路</h3>
+<p>输入描述 输入包含两个整数 x 和 y，表示起始位置和目标位置。</p>
+<p><strong>思路</strong></p>
 <p>由题意可得，最少步数就是找出<span
 class="math inline">\(|x-y|\)</span>里最长的一段上升子序列，再倒序一下，然后取最大值处理下剩余步，剩下的差值必然可以分解为若干个最大步数与一个比最大值小一点的数<br />
 设<span class="math inline">\(\displaystyle\sum_{i=0}^n\)</span>为<span
@@ -288,7 +289,168 @@ class="math inline">\(C\)</span><br />
 那么只用找出满足<span class="math inline">\(S+S-n+(C-2S+n)\bmod
 n+(C-2S+n)\mid n=C\)</span>的<span
 class="math inline">\(n\)</span>即可</p>
-<p>伪代码 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">c := <span class="type">int</span>(math.Abs(<span class="type">float64</span>(xPosition) - <span class="type">float64</span>(yPosition)))</span><br><span class="line">	<span class="keyword">if</span> c &lt; <span class="number">4</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> c</span><br><span class="line">	&#125;</span><br><span class="line">	count, now := <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">1</span>; ; i++ &#123;</span><br><span class="line">		count += i</span><br><span class="line">		<span class="keyword">if</span> (<span class="number">2</span>*count - i) &gt; c &#123;</span><br><span class="line">			count -= i</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		now = i</span><br><span class="line">	&#125;</span><br><span class="line">	ans := <span class="number">2</span>*now - <span class="number">1</span></span><br><span class="line">	<span class="keyword">if</span> (c<span class="number">-2</span>*count+now)%now != <span class="number">0</span> &#123;</span><br><span class="line">		ans++</span><br><span class="line">	&#125;</span><br><span class="line">	ans += (c - <span class="number">2</span>*count + now) / now</span><br><span class="line">	<span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+<p>伪代码 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">c := <span class="type">int</span>(math.Abs(<span class="type">float64</span>(xPosition) - <span class="type">float64</span>(yPosition)))</span><br><span class="line"><span class="keyword">if</span> c &lt; <span class="number">4</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> c</span><br><span class="line">&#125;</span><br><span class="line">count, now := <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">1</span>; ; i++ &#123;</span><br><span class="line">	count += i</span><br><span class="line">	<span class="keyword">if</span> (<span class="number">2</span>*count - i) &gt; c &#123;</span><br><span class="line">		count -= i</span><br><span class="line">		<span class="keyword">break</span></span><br><span class="line">	&#125;</span><br><span class="line">	now = i</span><br><span class="line">&#125;</span><br><span class="line">ans := <span class="number">2</span>*now - <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> (c<span class="number">-2</span>*count+now)%now != <span class="number">0</span> &#123;</span><br><span class="line">	ans++</span><br><span class="line">&#125;</span><br><span class="line">ans += (c - <span class="number">2</span>*count + now) / now</span><br><span class="line"><span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>寻找独特数字卡片</p>
+</summary>
+<p><strong>问题描述</strong><br />
+在一个班级中，每位同学都拿到了一张卡片，上面有一个整数。有趣的是，除了一个数字之外，所有的数字都恰好出现了两次。现在需要你帮助班长小C快速找到那个拿了独特数字卡片的同学手上的数字是什么。</p>
+<p>要求：</p>
+<p>设计一个算法，使其时间复杂度为 O(n)，其中 n 是班级的人数。
+尽量减少额外空间的使用，以体现你的算法优化能力。</p>
+<p><strong>思路</strong></p>
+<p>map秒了 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">card := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">int</span>]<span class="type">int</span>)</span><br><span class="line"><span class="keyword">for</span> _,v := <span class="keyword">range</span>(inp) &#123;</span><br><span class="line">	card[v] += <span class="number">1</span></span><br><span class="line">	<span class="comment">// fmt.Println(card[i],i)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> k,v := <span class="keyword">range</span>(card)&#123;</span><br><span class="line">	<span class="comment">// fmt.Println(k)</span></span><br><span class="line">	<span class="keyword">if</span> v == <span class="number">1</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> k</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>数字字符串格式化</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小M在工作时遇到了一个问题，他需要将用户输入的不带千分位逗号的数字字符串转换为带千分位逗号的格式，并且保留小数部分。小M还发现，有时候输入的数字字符串前面会有无用的
+0，这些也需要精简掉。请你帮助小M编写程序，完成这个任务。</p>
+<p><strong>思路</strong></p>
+<p>strings就行 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s = strings.TrimLeft(s, <span class="string">&quot;0&quot;</span>)</span><br><span class="line">n := strings.Index(s,<span class="string">&quot;.&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">-1</span> &#123;</span><br><span class="line">	n = <span class="built_in">len</span>(s)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> k := n - <span class="number">3</span>; k &gt; <span class="number">0</span>; k -= <span class="number">3</span> &#123;</span><br><span class="line">	s = s[:k] + <span class="string">&quot;,&quot;</span> + s[k:]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>小C的排列询问</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小C拿到了一个排列，她想知道在这个排列中，元素<code>x</code>和<code>y</code>是否是相邻的。排列是一个长度为<code>n</code>的数组，其中每个数字从1到n恰好出现一次。
+你的任务是判断在给定的排列中，x和y是否是相邻的。</p>
+<p><strong>思路</strong><br />
+大模拟</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> n &lt; <span class="number">2</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> k, v := <span class="keyword">range</span> a &#123;</span><br><span class="line">		<span class="keyword">if</span> v == x &#123;</span><br><span class="line">			<span class="keyword">if</span> k == <span class="number">0</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> a[k+<span class="number">1</span>] == y &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> k == <span class="built_in">len</span>(a)<span class="number">-1</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> a[k<span class="number">-1</span>] == y &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> a[k<span class="number">-1</span>] == y || a[k+<span class="number">1</span>] == y &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+</details>
+<details class="note info"><summary><p>找出整型数组中占比超过一半的数</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小R从班级中抽取了一些同学，每位同学都会给出一个数字。已知在这些数字中，某个数字的出现次数超过了数字总数的一半。现在需要你帮助小R找到这个数字。</p>
+<p><strong>思路</strong><br />
+遍历 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mi := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">int</span>]<span class="type">int</span>)</span><br><span class="line"><span class="keyword">for</span> _,i := <span class="keyword">range</span> array &#123;</span><br><span class="line">	mi[i]++</span><br><span class="line">	<span class="keyword">if</span> mi[i] &gt; <span class="built_in">len</span>(array)/<span class="number">2</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> i</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>小F的永久代币卡回本计划</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小F最近迷上了玩一款游戏，她面前有一个永久代币卡的购买机会。该卡片的价格为
+a 勾玉，每天登录游戏可以返还 b
+勾玉。小F想知道她至少需要登录多少天，才能让购买的永久代币卡回本。</p>
+<p><strong>思路</strong><br />
+神秘难度 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ans := a/b </span><br><span class="line"><span class="keyword">if</span> a%b != <span class="number">0</span> &#123;</span><br><span class="line">  ans +=<span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>构造特定数组的逆序拼接</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小U得到了一个数字n，他的任务是构造一个特定数组。这个数组的构造规则是：对于每个i从1到n，将数字n到i逆序拼接，直到i等于n为止。最终，输出这个拼接后的数组。</p>
+<p><strong>思路</strong><br />
+神秘金字塔 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s []<span class="type">int</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">1</span>; i &lt;= n; i++ &#123;</span><br><span class="line">	<span class="keyword">for</span> j := n; j &gt;= i; j-- &#123;</span><br><span class="line">		s = <span class="built_in">append</span>(s, j)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>比赛配对问题</p>
+</summary>
+<p><strong>问题描述</strong><br />
+算瑞士轮</p>
+<p><strong>思路</strong><br />
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ans := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n != <span class="number">1</span> &#123;</span><br><span class="line">	ans += n / <span class="number">2</span></span><br><span class="line">	<span class="keyword">if</span> n%<span class="number">2</span> != <span class="number">0</span> &#123;</span><br><span class="line">		n += <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line">	n /= <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>小U的数字插入问题</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小U手中有两个数字 a 和
+b。第一个数字是一个任意的正整数，而第二个数字是一个0到9之间的整数。<br />
+她的任务是将第二个数字 b 插入到第一个数字 a
+的某个位置，以形成一个最大的可能数字。</p>
+<p><strong>思路</strong><br />
+找到第一个比b小的位置插进去就好了 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sa := strconv.Itoa(a)</span><br><span class="line">sb := strconv.Itoa(b)</span><br><span class="line"><span class="keyword">for</span> k, _ := <span class="keyword">range</span> sa &#123;</span><br><span class="line">	<span class="keyword">if</span> sb[<span class="number">0</span>] &gt; sa[k] &#123;</span><br><span class="line">		sa = sa[:k] + sb + sa[k:]</span><br><span class="line">		<span class="keyword">break</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">   <span class="keyword">if</span> sa == strconv.Itoa(a) &#123;</span><br><span class="line">       sa += sb</span><br><span class="line">   &#125;</span><br><span class="line">ans, _ := strconv.Atoi(sa)</span><br><span class="line"><span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note info"><summary><p>组成字符串ku的最大次数</p>
+</summary>
+<p><strong>问题描述</strong><br />
+给定一个字符串s，该字符串中只包含英文大小写字母。<br />
+你需要计算从字符串中最多能组成多少个字符串
+"ku"。每次可以随机从字符串中选一个字符，并且选中的字符不能再使用。<br />
+字符串中的字符大小写可以忽略，即大写和小写字母视为相同。</p>
+<p><strong>思路</strong><br />
+转下大小写用strings秒了</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = strings.ToLower(s)</span><br><span class="line"><span class="keyword">return</span> min(strings.Count(s,<span class="string">&quot;k&quot;</span>),strings.Count(s,<span class="string">&quot;u&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="中等">中等</h2>
+<details class="note warning"><summary><p>超市里的货物架调整</p>
+</summary>
+<p><strong>问题描述</strong><br />
+在一个超市里，有一个包含n个格子的货物架，每个格子中放有一种商品，商品用小写字母
+a 到 z 表示。<br />
+当顾客进入超市时，他们会依次从第一个格子查找到第n个格子，寻找自己想要购买的商品。<br />
+如果在某个格子中找到该商品，顾客就会购买它并离开；如果中途遇到一个空格子，或查找完所有格子还没有找到想要的商品，顾客也会离开。</p>
+<p>作为超市管理员，你可以在顾客到来之前重新调整商品的顺序，以便尽可能多地出售商品。当第一个顾客进入后，商品位置不能再调整。你需要计算在最优调整下，最多可以卖出多少件商品。</p>
+<p><strong>思路</strong></p>
+<p>因为遇到空格子也会离开，所以每件商品最多被购买一次(因为第二次来会先遇到空的)，map存商品然后遍历顾客置0即可</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">good := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">byte</span>]<span class="type">int</span>)</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123;</span><br><span class="line">	good[s[i]] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">count := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; m; i++ &#123;</span><br><span class="line">	<span class="keyword">if</span> good[c[i]] == <span class="number">1</span> &#123;</span><br><span class="line">		count++</span><br><span class="line">		good[c[i]] = <span class="number">0</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> count</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
+
+</details>
+<details class="note warning"><summary><p>观光景点组合得分问题</p>
+</summary>
+<p><strong>问题描述</strong><br />
+一对景点 (i &lt; j) 的观光组合得分为 values[i] + values[j] + i -
+j，也就是两者评分之和减去它们之间的距离。
+小R想知道，在哪种情况下能够获得观光景点组合的最高得分。</p>
+<p><strong>思路</strong><br />
+贪心 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">max := <span class="function"><span class="keyword">func</span><span class="params">(a, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> a &gt; b &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b</span><br><span class="line">&#125;</span><br><span class="line">count := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i, v := <span class="keyword">range</span> values &#123;</span><br><span class="line">	<span class="keyword">for</span> j := i + <span class="number">1</span>; j &lt; <span class="built_in">len</span>(values); j++ &#123;</span><br><span class="line">		count = max(count, values[j]+v+i-j)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> count </span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note warning"><summary><p>数组元素之和最小化</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小C希望构造一个包含n个元素的数组，且满足以下条件：</p>
+<ul>
+<li>数组中的所有元素两两不同。</li>
+<li>数组所有元素的最大公约数为 k。</li>
+<li>数组元素之和尽可能小。 任务是输出该数组元素之和的最小值。</li>
+</ul>
+<p><strong>思路</strong></p>
+<p>谜底写在谜面上了 输出<span
+class="math inline">\(\displaystyle\sum_{i=0}^n*k\)</span>即可</p>
+
+</details>
+<details class="note warning"><summary><p>最少前缀操作问题</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小U和小R有两个字符串，分别是S和T，现在小U需要通过对S进行若干次操作，使其变成T的一个前缀。<br />
+操作可以是修改S的某一个字符，或者删除S末尾的字符。现在你需要帮助小U计算出，最少需要多少次操作才能让S变成T的前缀。</p>
+<p><strong>思路</strong></p>
+<p>因为只能从最后面删，所以直接遍历更改就好了，先判断下需不需要删
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ans := <span class="number">0</span></span><br><span class="line">n := <span class="built_in">len</span>(S)</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(S) &gt; <span class="built_in">len</span>(T) &#123;</span><br><span class="line">	ans = <span class="built_in">len</span>(S) - <span class="built_in">len</span>(T)</span><br><span class="line">	n = <span class="built_in">len</span>(T)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123;</span><br><span class="line">	<span class="keyword">if</span> S[i] != T[i] &#123;</span><br><span class="line">		ans++</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+
+</details>
+<details class="note warning"><summary><p>环形数组中的最大贡献值</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小S希望找到一对下标，使得它们的贡献值尽可能大。环形数组的特点是最左和最右的元素也是相邻的。你需要帮助她找到最大贡献值。</p>
+<p><strong>思路</strong></p>
+<p>和前面那题一样，加个取最小值就好了 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ans := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123;</span><br><span class="line">	<span class="keyword">for</span> j := i+<span class="number">1</span>; j &lt; n; j++ &#123;</span><br><span class="line">		ans = max(ans, (a[i]+a[j])*min((j-i), (n-j+i)))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans </span><br></pre></td></tr></table></figure></p>
+
+</details>
+<h2 id="困难">困难</h2>
+<details class="note danger"><summary><p>最大UCC子串计算</p>
+</summary>
+<p><strong>问题描述</strong><br />
+小S有一个由字符 'U' 和 'C'
+组成的字符串<code>S</code>，并希望在编辑距离不超过给定值<code>m</code>的条件下，尽可能多地在字符串中找到
+"UCC" 子串。</p>
+<p>编辑距离定义为将字符串<code>S</code>转化为其他字符串时所需的最少编辑操作次数。允许的每次编辑操作是插入、删除或替换单个字符。你需要计算在给定的编辑距离限制<code>m</code>下，能够包含最多
+"UCC" 子串的字符串可能包含多少个这样的子串。</p>
+<p>例如，对于字符串"UCUUCCCCC"和编辑距离限制m =
+3，可以通过编辑字符串生成最多包含3个"UCC"子串的序列。</p>
+<p><strong>思路</strong></p>
+<p>神秘大模拟啊<br />
+遍历一下字符串分别找<code>UCC</code>,<code>UC</code>,<code>CC</code>,<code>U</code>,<code>C</code>就好了，最少步数就从前往后减，剩下的就全组<code>UCC</code><br />
+卡最久的还是在debug go的range上</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">s = strings.ToUpper(s)</span><br><span class="line">ucc, uc, cc, u, c := <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> k := <span class="number">0</span>; k &lt; <span class="built_in">len</span>(s); k++ &#123;</span><br><span class="line">	<span class="keyword">if</span> s[k] == <span class="string">&#x27;U&#x27;</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> k == <span class="built_in">len</span>(s)<span class="number">-1</span> &#123;</span><br><span class="line">			u++</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> k+<span class="number">1</span> == <span class="built_in">len</span>(s)<span class="number">-1</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> s[k+<span class="number">1</span>] == <span class="string">&#x27;U&#x27;</span> &#123;</span><br><span class="line">				u++</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				uc++</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> s[k+<span class="number">1</span>] == <span class="string">&#x27;U&#x27;</span> &#123;</span><br><span class="line">				u++</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> s[k+<span class="number">2</span>] == <span class="string">&#x27;C&#x27;</span> &#123;</span><br><span class="line">				ucc++</span><br><span class="line">				k = k + <span class="number">2</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				uc++</span><br><span class="line">				k = k + <span class="number">1</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> k == <span class="built_in">len</span>(s)<span class="number">-1</span> &#123;</span><br><span class="line">			c++</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> k+<span class="number">1</span> == <span class="built_in">len</span>(s)<span class="number">-1</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> s[k+<span class="number">1</span>] == <span class="string">&#x27;U&#x27;</span> &#123;</span><br><span class="line">				c++</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				cc++</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> s[k+<span class="number">1</span>] == <span class="string">&#x27;U&#x27;</span> &#123;</span><br><span class="line">				c++</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				cc++</span><br><span class="line">				k = k + <span class="number">1</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">ans := ucc</span><br><span class="line"><span class="keyword">if</span> m-uc &gt; <span class="number">0</span> &#123;</span><br><span class="line">	ans += uc</span><br><span class="line">	m -= uc</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	ans += m</span><br><span class="line">	<span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> m-cc &gt; <span class="number">0</span> &#123;</span><br><span class="line">	ans += cc</span><br><span class="line">	m -= cc</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	ans += m</span><br><span class="line">	<span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> m<span class="number">-2</span>*u &gt; <span class="number">0</span> &#123;</span><br><span class="line">	ans += u</span><br><span class="line">	m -= <span class="number">2</span> * u</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	ans += m / <span class="number">2</span></span><br><span class="line">	<span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> m<span class="number">-2</span>*c &gt; <span class="number">0</span> &#123;</span><br><span class="line">	ans += c</span><br><span class="line">	m -= <span class="number">2</span> * c</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	ans += m / <span class="number">2</span></span><br><span class="line">	<span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line">ans += m / <span class="number">3</span></span><br><span class="line"><span class="comment">// fmt.Println(ucc, uc, cc, u, c)</span></span><br><span class="line"><span class="keyword">return</span> ans <span class="comment">// Placeholder</span></span><br></pre></td></tr></table></figure>
 
 </details>
 <!-- flag of hidden posts -->
