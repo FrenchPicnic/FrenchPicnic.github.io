@@ -23,55 +23,34 @@ href="https://github.com/coreybutler/nvm-windows/issues/984">nvm报错</a><code>
 因为本地没有太多重要的库,干脆手动下载了</p>
 <p>总结还是go和rust这种一键更新自带包管理器的更新好多了<br />
 或者是我姿势不对吧</p>
+<h3 id="section-2">2024-11-27</h3>
+<p>神秘bug<br />
+好久没写博客,因为上次写的时候换成了<code>hexo-renderer-pandoc</code>的markdown渲染用来写数学公式,结果就是友链页面使用的渲染莫名炸了<br />
+<a href="https://finisky.github.io/simplestblogroll/">Finisky
+Garden的markdown内嵌HTML方式</a><br />
+变成了下面这种直接嵌入一段html代码,百思不得,也没查到问题所在<br />
+<img src="../../images/note-style.png" alt="介样" /></p>
+<p>在hexog生成的html里看到整个style都被当成code用precode包裹起来了,但没找到会造成这种情况的代码<br />
+最后误打误撞把所有的空格都删了之后就正常显示了,代价是变得特别丑(不过也没人看原版md)</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>// 大概变成这样了</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;ava&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card-header&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;info&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>然后学到了直接上传的图片可以用<code>../../image/xxxxx.png</code>来代替,因为用了加密插件所以路径要多套一层<br />
+懒得找图床了()</p>
 ]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
         <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
-    <url>/posts/201cd6df/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>截止至提交时本文所使用的wasm库版本为<code>"moonbitlang/wasm4": "0.2.2"</code><br />
-源代码对应的仓库为<a
-href="https://github.com/FrenchPicnic/MoonbitWasm4">这里</a><br />
-游戏评分仓库为<a
-href="https://github.com/FrenchPicnic/MoonBit-Code-JAM-2024">这里</a>,请多多star<br />
-一些游戏心路可以在<a
-href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
-<h1 id="制作笔记">制作笔记</h1>
-<h2 id="碎碎念">碎碎念</h2>
-<blockquote>
-<p>其实这次游戏赛道也算个小gamejam?虽然从9月就知道这个比赛了,但自己硬是拖到10月25才开始学习加做<br />
-因为本来10月打算玩taptap的聚光灯,但发现星火就是一坨结果拖到了那边结束才开始动工</p>
-</blockquote>
-<p>博主也不可避免的陷入了单人gamejail的大问题——该做什么<br />
-虽然还没开始写,但博主脑袋里一直在头脑风暴：比如这里该做什么哪里该做什么,我要实现多么酷炫宏大的动画</p>
-<p>然后发现wasm4并不支持我脑袋里宏大的想法——手写刷新像素真的太麻烦了<br />
-加上这次限制64kb,做出第一版的大概的时候发现自己只剩下不到10kb了,于是大砍需求和功能,最后阉割了不少功能</p>
-<p>一开始是想做个类似FF的RPG,因为很适合复古掌机游戏风格,但发现需要加的功能太多了就砍砍变成了自己的游戏名</p>
-<blockquote>
-<p>地上城与108个魔王/Up Dungeon</p>
-</blockquote>
-<p>从名字倒推自己的思路就是扮演一个英雄,一路杀穿108个敌人,最后打败魔王,获得胜利<br />
-结合一般的RPG就有了一开始的雏形,回合制的战斗,你可以选择攻击/防御/治疗三种选项,然后随着升级增加攻击的方式,防御的形式<del>(比如无敌与强制锁血)</del>,还有治疗的次数限制</p>
-<center>
-<img src="https://raw.githubusercontent.com/FrenchPicnic/Self_Image/refs/heads/main/wasm4/start.png" alt="cover" style="zoom:50%;" />
-</center>
-<p>第一版为了蹭早鸟奖的简单demo,也是最终的游戏底层框架了</p>
-<p>后面就加了防御的盾牌效果</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>PL</category>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>MoonBit</tag>
-        <tag>WASM</tag>
       </tags>
   </entry>
   <entry>
@@ -208,50 +187,6 @@ href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
       </categories>
       <tags>
         <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Obsidian+HEXO配置博客</title>
-    <url>/posts/4dcd95ef/</url>
-    <content><![CDATA[<blockquote>
-<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
-</blockquote>
-<span id="more"></span>
-<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
-<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
-但typora也只适合用来写单文件,最后就试试obs了</p>
-<h4 id="基本的">基本的</h4>
-<p>如果是第一次配置hexo的话还是使用终端方便点<br />
-配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
-注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
-不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
-<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
-所以需要下一个第三方插件<code>Shell commands</code>,
-加上我是Windows环境,下完插件后新建两个命令就好了</p>
-<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure></p>
-<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
-<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
-以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
-<p>用obs比vscode的优势大概就是</p>
-<h4 id="一些进阶">一些进阶</h4>
-<p>主要是在学<code>shell commands</code><br />
-原生Obs并没有提供直接执行终端命令的方法<br />
-所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
-要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
-或者把一般的文章放到日记里去,就可以一键生成了</p>
-<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
-TODO: <a
-href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
-class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>杂项</tag>
       </tags>
   </entry>
   <entry>
@@ -421,6 +356,93 @@ href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面
       </categories>
       <tags>
         <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
+<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
+但typora也只适合用来写单文件,最后就试试obs了</p>
+<h4 id="基本的">基本的</h4>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br />
+配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
+注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
+不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
+<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
+所以需要下一个第三方插件<code>Shell commands</code>,
+加上我是Windows环境,下完插件后新建两个命令就好了</p>
+<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure></p>
+<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
+<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
+以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
+<p>用obs比vscode的优势大概就是</p>
+<h4 id="一些进阶">一些进阶</h4>
+<p>主要是在学<code>shell commands</code><br />
+原生Obs并没有提供直接执行终端命令的方法<br />
+所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
+要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
+或者把一般的文章放到日记里去,就可以一键生成了</p>
+<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
+TODO: <a
+href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
+class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
+    <url>/posts/201cd6df/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>截止至提交时本文所使用的wasm库版本为<code>"moonbitlang/wasm4": "0.2.2"</code><br />
+源代码对应的仓库为<a
+href="https://github.com/FrenchPicnic/MoonbitWasm4">这里</a><br />
+游戏评分仓库为<a
+href="https://github.com/FrenchPicnic/MoonBit-Code-JAM-2024">这里</a>,请多多star<br />
+一些游戏心路可以在<a
+href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
+<h1 id="制作笔记">制作笔记</h1>
+<h2 id="碎碎念">碎碎念</h2>
+<blockquote>
+<p>其实这次游戏赛道也算个小gamejam?虽然从9月就知道这个比赛了,但自己硬是拖到10月25才开始学习加做<br />
+因为本来10月打算玩taptap的聚光灯,但发现星火就是一坨结果拖到了那边结束才开始动工</p>
+</blockquote>
+<p>博主也不可避免的陷入了单人gamejail的大问题——该做什么<br />
+虽然还没开始写,但博主脑袋里一直在头脑风暴：比如这里该做什么哪里该做什么,我要实现多么酷炫宏大的动画</p>
+<p>然后发现wasm4并不支持我脑袋里宏大的想法——手写刷新像素真的太麻烦了<br />
+加上这次限制64kb,做出第一版的大概的时候发现自己只剩下不到10kb了,于是大砍需求和功能,最后阉割了不少功能</p>
+<p>一开始是想做个类似FF的RPG,因为很适合复古掌机游戏风格,但发现需要加的功能太多了就砍砍变成了自己的游戏名</p>
+<blockquote>
+<p>地上城与108个魔王/Up Dungeon</p>
+</blockquote>
+<p>从名字倒推自己的思路就是扮演一个英雄,一路杀穿108个敌人,最后打败魔王,获得胜利<br />
+结合一般的RPG就有了一开始的雏形,回合制的战斗,你可以选择攻击/防御/治疗三种选项,然后随着升级增加攻击的方式,防御的形式<del>(比如无敌与强制锁血)</del>,还有治疗的次数限制</p>
+<center>
+<img src="https://raw.githubusercontent.com/FrenchPicnic/Self_Image/refs/heads/main/wasm4/start.png" alt="cover" style="zoom:50%;" />
+</center>
+<p>第一版为了蹭早鸟奖的简单demo,也是最终的游戏底层框架了</p>
+<p>后面就加了防御的盾牌效果</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>PL</category>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>MoonBit</tag>
+        <tag>WASM</tag>
       </tags>
   </entry>
 </search>
