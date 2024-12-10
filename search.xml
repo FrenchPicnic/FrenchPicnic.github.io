@@ -190,6 +190,49 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
       </tags>
   </entry>
   <entry>
+    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
+    <url>/posts/201cd6df/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>截止至提交时本文所使用的wasm库版本为<code>"moonbitlang/wasm4": "0.2.2"</code><br />
+源代码对应的仓库为<a
+href="https://github.com/FrenchPicnic/MoonbitWasm4">这里</a><br />
+游戏评分仓库为<a
+href="https://github.com/FrenchPicnic/MoonBit-Code-JAM-2024">这里</a>,请多多star<br />
+一些游戏心路可以在<a
+href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
+<h1 id="制作笔记">制作笔记</h1>
+<h2 id="碎碎念">碎碎念</h2>
+<blockquote>
+<p>其实这次游戏赛道也算个小gamejam?虽然从9月就知道这个比赛了,但自己硬是拖到10月25才开始学习加做<br />
+因为本来10月打算玩taptap的聚光灯,但发现星火就是一坨结果拖到了那边结束才开始动工</p>
+</blockquote>
+<p>博主也不可避免的陷入了单人gamejail的大问题——该做什么<br />
+虽然还没开始写,但博主脑袋里一直在头脑风暴：比如这里该做什么哪里该做什么,我要实现多么酷炫宏大的动画</p>
+<p>然后发现wasm4并不支持我脑袋里宏大的想法——手写刷新像素真的太麻烦了<br />
+加上这次限制64kb,做出第一版的大概的时候发现自己只剩下不到10kb了,于是大砍需求和功能,最后阉割了不少功能</p>
+<p>一开始是想做个类似FF的RPG,因为很适合复古掌机游戏风格,但发现需要加的功能太多了就砍砍变成了自己的游戏名</p>
+<blockquote>
+<p>地上城与108个魔王/Up Dungeon</p>
+</blockquote>
+<p>从名字倒推自己的思路就是扮演一个英雄,一路杀穿108个敌人,最后打败魔王,获得胜利<br />
+结合一般的RPG就有了一开始的雏形,回合制的战斗,你可以选择攻击/防御/治疗三种选项,然后随着升级增加攻击的方式,防御的形式<del>(比如无敌与强制锁血)</del>,还有治疗的次数限制</p>
+<center>
+<img src="https://raw.githubusercontent.com/FrenchPicnic/Self_Image/refs/heads/main/wasm4/start.png" alt="cover" style="zoom:50%;" />
+</center>
+<p>第一版为了蹭早鸟奖的简单demo,也是最终的游戏底层框架了</p>
+<p>后面就加了防御的盾牌效果</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>PL</category>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>MoonBit</tag>
+        <tag>WASM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next 使用与配置记录</title>
     <url>/posts/3c9c6c7a/</url>
     <content><![CDATA[<blockquote>
@@ -198,7 +241,8 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
 主要记录下自己的相关配置啥的</p>
 </blockquote>
 <p>本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文<br />
-<span id="more"></span> # 安装</p>
+<span id="more"></span></p>
+<h1 id="安装">安装</h1>
 <p>hexo的安装就不提了,相关教程实在是太多了<br />
 只看官方文档也可以很快的上手<br />
 我用的还是github page的一键部署,很多都没那么麻烦</p>
@@ -400,49 +444,6 @@ class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
       </categories>
       <tags>
         <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
-    <url>/posts/201cd6df/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>截止至提交时本文所使用的wasm库版本为<code>"moonbitlang/wasm4": "0.2.2"</code><br />
-源代码对应的仓库为<a
-href="https://github.com/FrenchPicnic/MoonbitWasm4">这里</a><br />
-游戏评分仓库为<a
-href="https://github.com/FrenchPicnic/MoonBit-Code-JAM-2024">这里</a>,请多多star<br />
-一些游戏心路可以在<a
-href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
-<h1 id="制作笔记">制作笔记</h1>
-<h2 id="碎碎念">碎碎念</h2>
-<blockquote>
-<p>其实这次游戏赛道也算个小gamejam?虽然从9月就知道这个比赛了,但自己硬是拖到10月25才开始学习加做<br />
-因为本来10月打算玩taptap的聚光灯,但发现星火就是一坨结果拖到了那边结束才开始动工</p>
-</blockquote>
-<p>博主也不可避免的陷入了单人gamejail的大问题——该做什么<br />
-虽然还没开始写,但博主脑袋里一直在头脑风暴：比如这里该做什么哪里该做什么,我要实现多么酷炫宏大的动画</p>
-<p>然后发现wasm4并不支持我脑袋里宏大的想法——手写刷新像素真的太麻烦了<br />
-加上这次限制64kb,做出第一版的大概的时候发现自己只剩下不到10kb了,于是大砍需求和功能,最后阉割了不少功能</p>
-<p>一开始是想做个类似FF的RPG,因为很适合复古掌机游戏风格,但发现需要加的功能太多了就砍砍变成了自己的游戏名</p>
-<blockquote>
-<p>地上城与108个魔王/Up Dungeon</p>
-</blockquote>
-<p>从名字倒推自己的思路就是扮演一个英雄,一路杀穿108个敌人,最后打败魔王,获得胜利<br />
-结合一般的RPG就有了一开始的雏形,回合制的战斗,你可以选择攻击/防御/治疗三种选项,然后随着升级增加攻击的方式,防御的形式<del>(比如无敌与强制锁血)</del>,还有治疗的次数限制</p>
-<center>
-<img src="https://raw.githubusercontent.com/FrenchPicnic/Self_Image/refs/heads/main/wasm4/start.png" alt="cover" style="zoom:50%;" />
-</center>
-<p>第一版为了蹭早鸟奖的简单demo,也是最终的游戏底层框架了</p>
-<p>后面就加了防御的盾牌效果</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>PL</category>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>MoonBit</tag>
-        <tag>WASM</tag>
       </tags>
   </entry>
 </search>
