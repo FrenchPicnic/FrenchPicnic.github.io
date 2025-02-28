@@ -233,6 +233,50 @@ href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
       </tags>
   </entry>
   <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
+<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
+但typora也只适合用来写单文件,最后就试试obs了</p>
+<h4 id="基本的">基本的</h4>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br />
+配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
+注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
+不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
+<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
+所以需要下一个第三方插件<code>Shell commands</code>,
+加上我是Windows环境,下完插件后新建两个命令就好了</p>
+<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure></p>
+<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
+<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
+以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
+<p>用obs比vscode的优势大概就是</p>
+<h4 id="一些进阶">一些进阶</h4>
+<p>主要是在学<code>shell commands</code><br />
+原生Obs并没有提供直接执行终端命令的方法<br />
+所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
+要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
+或者把一般的文章放到日记里去,就可以一键生成了</p>
+<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
+TODO: <a
+href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
+class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next 使用与配置记录</title>
     <url>/posts/3c9c6c7a/</url>
     <content><![CDATA[<blockquote>
@@ -394,50 +438,6 @@ href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+
 <a
 href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化
 - Yuleo的文章 - 知乎</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Obsidian+HEXO配置博客</title>
-    <url>/posts/4dcd95ef/</url>
-    <content><![CDATA[<blockquote>
-<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
-</blockquote>
-<span id="more"></span>
-<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
-<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
-但typora也只适合用来写单文件,最后就试试obs了</p>
-<h4 id="基本的">基本的</h4>
-<p>如果是第一次配置hexo的话还是使用终端方便点<br />
-配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
-注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
-不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
-<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
-所以需要下一个第三方插件<code>Shell commands</code>,
-加上我是Windows环境,下完插件后新建两个命令就好了</p>
-<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">start &#x27;http://localhost:4000&#x27;</span><br></pre></td></tr></table></figure></p>
-<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
-<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
-以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
-<p>用obs比vscode的优势大概就是</p>
-<h4 id="一些进阶">一些进阶</h4>
-<p>主要是在学<code>shell commands</code><br />
-原生Obs并没有提供直接执行终端命令的方法<br />
-所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
-要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
-或者把一般的文章放到日记里去,就可以一键生成了</p>
-<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
-TODO: <a
-href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
-class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
 ]]></content>
       <categories>
         <category>学习</category>
