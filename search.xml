@@ -190,49 +190,6 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
       </tags>
   </entry>
   <entry>
-    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
-    <url>/posts/201cd6df/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>截止至提交时本文所使用的wasm库版本为<code>"moonbitlang/wasm4": "0.2.2"</code><br />
-源代码对应的仓库为<a
-href="https://github.com/FrenchPicnic/MoonbitWasm4">这里</a><br />
-游戏评分仓库为<a
-href="https://github.com/FrenchPicnic/MoonBit-Code-JAM-2024">这里</a>,请多多star<br />
-一些游戏心路可以在<a
-href="https://xjtu.app/t/topic/13755/21">这里</a>找到</p>
-<h1 id="制作笔记">制作笔记</h1>
-<h2 id="碎碎念">碎碎念</h2>
-<blockquote>
-<p>其实这次游戏赛道也算个小gamejam?虽然从9月就知道这个比赛了,但自己硬是拖到10月25才开始学习加做<br />
-因为本来10月打算玩taptap的聚光灯,但发现星火就是一坨结果拖到了那边结束才开始动工</p>
-</blockquote>
-<p>博主也不可避免的陷入了单人gamejail的大问题——该做什么<br />
-虽然还没开始写,但博主脑袋里一直在头脑风暴：比如这里该做什么哪里该做什么,我要实现多么酷炫宏大的动画</p>
-<p>然后发现wasm4并不支持我脑袋里宏大的想法——手写刷新像素真的太麻烦了<br />
-加上这次限制64kb,做出第一版的大概的时候发现自己只剩下不到10kb了,于是大砍需求和功能,最后阉割了不少功能</p>
-<p>一开始是想做个类似FF的RPG,因为很适合复古掌机游戏风格,但发现需要加的功能太多了就砍砍变成了自己的游戏名</p>
-<blockquote>
-<p>地上城与108个魔王/Up Dungeon</p>
-</blockquote>
-<p>从名字倒推自己的思路就是扮演一个英雄,一路杀穿108个敌人,最后打败魔王,获得胜利<br />
-结合一般的RPG就有了一开始的雏形,回合制的战斗,你可以选择攻击/防御/治疗三种选项,然后随着升级增加攻击的方式,防御的形式<del>(比如无敌与强制锁血)</del>,还有治疗的次数限制</p>
-<center>
-<img src="https://raw.githubusercontent.com/FrenchPicnic/Self_Image/refs/heads/main/wasm4/start.png" alt="cover" style="zoom:50%;" />
-</center>
-<p>第一版为了蹭早鸟奖的简单demo,也是最终的游戏底层框架了</p>
-<p>后面就加了防御的盾牌效果</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>PL</category>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>MoonBit</tag>
-        <tag>WASM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Obsidian+HEXO配置博客</title>
     <url>/posts/4dcd95ef/</url>
     <content><![CDATA[<blockquote>
@@ -444,6 +401,78 @@ href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面
       </categories>
       <tags>
         <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024年终总结</title>
+    <url>/posts/bf11e261/</url>
+    <content><![CDATA[<figure>
+<img src="https://iili.io/2PMBfqb.md.png" alt="人生啊" />
+<figcaption aria-hidden="true">人生啊</figcaption>
+</figure>
+<h1 id="前言">前言</h1>
+<p>依旧是随机完结的年终总结，比起年终大概是一个小随笔了<br />
+虽然依旧是窗外一成不变的景色的一年，但总归是在心态上多了一些改变了<br />
+要写的还是很多，随着记忆的模糊大部分故事都要变成碎碎念了<br />
+不过牢记熊熊言：<br />
+<a
+href="https://cynosura.one/posts/nobody-cares-about-your-blog">不要试图去创造写作的意义，仅仅去记录自己所想即可</a></p>
+<p><del>所以我要把以前没写完的补上来</del></p>
+<div class="note success"><p>如果说怀念过去是在历史长河里刻舟求剑<br />
+那难道展望未来就是在前行的道路上望梅止渴吗</p>
+</div>
+<p>以前怪喜欢写题记的，不管啥作文都要塞一个喜欢的句子，现在想想就是装X<br />
+不过很酷</p>
+<p>总之今年的歌<br />
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=370 height=180 src="//music.163.com/outchain/player?type=3&id=2514356779&auto=0&height=66"></iframe></p>
+<h1 id="internet">Internet</h1>
+<p>这两年来在互联网认识了不少人，虽然大多数都是单向的，双向的寥寥无几<br />
+本来打算给网上认识的人写一个印象集(因为我闲得发慌)，但发现随着时间的流逝加之自己也不知道怎么去维护关系，大部分人已经变了样了</p>
+<p>我还是照旧就是了，reaction
+bot的好处就是不需要担心相处，代价就是很容易被替换XD<br />
+人倒是挺老式IE的，可能要聊很久才能拼凑出我的大概，搜索能得到的东西也很少，但我的响应速度还是很Edge的</p>
+<p><del>以后多写点东西好让人更多的了解</del></p>
+<p>加了不少频道，看了很多人丰富的生活，给自己定了很多咕咕了的目标<br />
+收藏夹里加入了一个又一个的博客，不过自己也没有去二次打开了，赛博收藏癖是这样的</p>
+<p>自己的channel倒是彻底断更了一段时间，倒不是没什么好更的，只是突然觉得不知道要发啥，以及发了之后想要得到些什么
+最后顺便archive了自己的附属小群，虽然也没人说话</p>
+<p>推那边也没咋上了，之前偷偷开了个小号当日常推水过一些，但总感觉少了点什么，最后也变成了点赞bot<br />
+是自己的初心变了吧</p>
+<h1 id="backing">Backing</h1>
+<p>总之是暑假的时候在小群聊天里发了<del>毒誓</del>说这个暑假一定要做点什么<br />
+最后物色了个以前看过只有机翻的视频，正好那个up也销号跑路了</p>
+<p>下了个aegisub，问了下前辈一些烤肉事项(比如用的字体和压制的方法之类的)，挑了几个晚上就开干了<br />
+确实那会进入了心流，然后发现自己的效率过于低下了<br />
+最后前后加起来快2周才翻译完一个1小时的视频，比前辈几天速通2小时的慢多了</p>
+<p>忐忑的上传之后就在小群里吐槽了下，最后等来了几个类似ai的回复，自己也没管了<br />
+不过这种干了点什么事带来的成就感还蛮好，自己也开始准备下一个视频了</p>
+<p>过几天回来看的时候播放量欻欻涨了，估计是b站对第一个投稿的推流，总之最后涨到了200粉左右<br />
+还有一些圈内的前辈来指导指出视频的翻译错误，但由于我的懒狗最后都没有纠正</p>
+<p>算下来开始烤肉到现在发了6个视频了，基本都是半小时以上的，要说什么大概就是和ai大人的合作更加紧密了</p>
+<p>虽然播放量都惨淡，不过有人看就好</p>
+<h1 id="study">Study</h1>
+<p>0进展，pass</p>
+<p>学习的书签栏是越来越多了，但真正二次打开的少之又少，总之今年改进</p>
+<p>倒是参加了个MBT的游戏开发大赛，大概是用Moonbit写一个wasm的游戏<br />
+自己本来是想仿照传说之下写一个差不多的游戏的，但受限于时间和自己的屎山优化最后都没有太成功，拿了300的京东卡跑路</p>
+<p>不过倒是有了一些自己的游戏构想，等哪天想做一个“独游开发者”再去实践了</p>
+<p>去观摩了下大佬的代码，还是得多学语言啊</p>
+<p>听说今年要改成国家级奖项了，到时候再去玩玩</p>
+<h1 id="trip">Trip</h1>
+<p>好像也没去哪里，都在学校和家的周边游荡</p>
+<p>宅宅的三点一线没有太多的起伏，倒是有不少友人一直在发一些跑到外面去玩的照片然后给我看</p>
+<p>这算不算一种旅游呢</p>
+<h1 id="game">Game</h1>
+<p>也就为了和homie一起玩入坑了lolm，不过没有沉迷进去，因为没那么喜欢</p>
+<h1 id="future">Future</h1>
+<p>hmm，总之先把浏览器里每次打开都充满的标签页给干掉吧<br />
+马上就是充满未知的未来了</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
 </search>

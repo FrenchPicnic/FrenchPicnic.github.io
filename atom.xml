@@ -6,7 +6,7 @@
   <link href="http://frenchpicnic.github.io/atom.xml" rel="self"/>
   
   <link href="http://frenchpicnic.github.io/"/>
-  <updated>2024-11-12T21:01:55.973Z</updated>
+  <updated>2025-05-06T11:57:32.202Z</updated>
   <id>http://frenchpicnic.github.io/</id>
   
   <author>
@@ -17,27 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MoonBit与WASM——记2024年全球 MoonBit 编程创新赛游戏赛道</title>
-    <link href="http://frenchpicnic.github.io/posts/201cd6df/"/>
-    <id>http://frenchpicnic.github.io/posts/201cd6df/</id>
-    <published>2024-10-25T04:35:52.000Z</published>
-    <updated>2024-11-12T21:01:55.973Z</updated>
+    <title>2024年终总结</title>
+    <link href="http://frenchpicnic.github.io/posts/bf11e261/"/>
+    <id>http://frenchpicnic.github.io/posts/bf11e261/</id>
+    <published>2024-12-29T19:48:39.000Z</published>
+    <updated>2025-05-06T11:57:32.202Z</updated>
     
     
-    <summary type="html">这次选的游戏开发赛道,因为还不够PL人</summary>
+    <summary type="html">Though, Life still full of wonder</summary>
     
     
     
-    <category term="学习" scheme="http://frenchpicnic.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="PL" scheme="http://frenchpicnic.github.io/categories/PL/"/>
-    
-    <category term="游戏" scheme="http://frenchpicnic.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    <category term="日常" scheme="http://frenchpicnic.github.io/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-    <category term="MoonBit" scheme="http://frenchpicnic.github.io/tags/MoonBit/"/>
-    
-    <category term="WASM" scheme="http://frenchpicnic.github.io/tags/WASM/"/>
+    <category term="日常" scheme="http://frenchpicnic.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
