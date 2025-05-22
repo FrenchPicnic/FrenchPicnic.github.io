@@ -45,6 +45,10 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>然后学到了直接上传的图片可以用<code>../../image/xxxxx.png</code>来代替,因为用了加密插件所以路径要多套一层<br />
 懒得找图床了()</p>
+<h3 id="section-3">2025-05-23</h3>
+<p>写wp的时候发现<code>&#123;</code>和<code>#</code>的组合会导致之后的内容无法渲染<br />
+https://hexo.io/docs/troubleshooting#Template-render-error</p>
+<p>解决方案是加三个反引号包裹起来,但还是很迷</p>
 ]]></content>
       <categories>
         <category>学习</category>
