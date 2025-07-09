@@ -6,7 +6,7 @@
   <link href="http://frenchpicnic.github.io/atom.xml" rel="self"/>
   
   <link href="http://frenchpicnic.github.io/"/>
-  <updated>2025-05-06T11:57:32.202Z</updated>
+  <updated>2025-07-09T09:55:45.630Z</updated>
   <id>http://frenchpicnic.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>置顶</title>
+    <link href="http://frenchpicnic.github.io/posts/cc4d5834/"/>
+    <id>http://frenchpicnic.github.io/posts/cc4d5834/</id>
+    <published>2025-05-07T08:10:10.000Z</published>
+    <updated>2025-07-09T09:55:45.630Z</updated>
+    
+    
+    <summary type="html">一个导航栏</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>2024年终总结</title>
     <link href="http://frenchpicnic.github.io/posts/bf11e261/"/>
     <id>http://frenchpicnic.github.io/posts/bf11e261/</id>
     <published>2024-12-29T19:48:39.000Z</published>
-    <updated>2025-05-06T11:57:32.202Z</updated>
+    <updated>2025-07-09T09:50:36.174Z</updated>
     
     
     <summary type="html">Though, Life still full of wonder</summary>
@@ -40,7 +55,7 @@
     <link href="http://frenchpicnic.github.io/posts/7094f7c2/"/>
     <id>http://frenchpicnic.github.io/posts/7094f7c2/</id>
     <published>2024-09-05T10:16:10.000Z</published>
-    <updated>2025-05-22T16:12:25.525Z</updated>
+    <updated>2025-07-09T07:07:34.602Z</updated>
     
     
     <summary type="html">一些神必的小笔记,主要是内容不够氵一篇或者临时问题</summary>
@@ -97,7 +112,7 @@
     <link href="http://frenchpicnic.github.io/posts/3c9c6c7a/"/>
     <id>http://frenchpicnic.github.io/posts/3c9c6c7a/</id>
     <published>2023-12-26T06:35:31.000Z</published>
-    <updated>2025-05-07T08:45:19.823Z</updated>
+    <updated>2025-07-08T07:09:48.065Z</updated>
     
     
     <summary type="html">本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文</summary>

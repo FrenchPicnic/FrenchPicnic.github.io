@@ -1,25 +1,24 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/icon.svg">
+  <link rel="icon" href="/images/icon.svg">
+  
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"frenchpicnic.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="FrenchPicnic">
+  <meta name="keywords" content="">
+  
     <meta name="description" content="本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Next 使用与配置记录">
@@ -28,253 +27,290 @@
 <meta property="og:description" content="本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-26T06:35:31.000Z">
-<meta property="article:modified_time" content="2025-05-07T08:45:19.823Z">
+<meta property="article:modified_time" content="2025-07-08T07:09:48.065Z">
 <meta property="article:author" content="FrenchPicnic">
 <meta property="article:tag" content="杂项">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Next 使用与配置记录 - FrenchPicnic&#39;s Nothing Life</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="http://frenchpicnic.github.io/posts/3c9c6c7a/">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://frenchpicnic.github.io/posts/3c9c6c7a/","path":"posts/3c9c6c7a/","title":"Next 使用与配置记录"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Next 使用与配置记录 | FrenchPicnic's Nothing Life</title>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"frenchpicnic.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-<link rel="alternate" href="/atom.xml" title="FrenchPicnic's Nothing Life" type="application/atom+xml">
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="FrenchPicnic's Nothing Life" type="application/atom+xml">
 <link rel="alternate" href="/rss2.xml" title="FrenchPicnic's Nothing Life" type="application/rss+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
 
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
+<body>
+  
 
-  <div class="site-meta">
+  <header>
+    
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">FrenchPicnic's Nothing Life</p>
-      <i class="logo-line"></i>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>FrenchPicnic&#39;s Nothing Life</strong>
     </a>
-      <p class="site-subtitle" itemprop="description">Life is meaningless</p>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/collection/" target="_self">
+                <i class="iconfont icon-books"></i>
+                <span>收藏</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-收藏"><a href="/collection/" rel="section"><i class="fa fa-book fa-fw"></i>收藏</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
 </nav>
 
+  
 
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="搜索..." spellcheck="false"
-                type="search" class="search-input">
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/banner/main.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Next 使用与配置记录"></span>
+          
         </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fa fa-spinner fa-pulse fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</header>
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9A%84%E9%A6%96%E9%A1%B5"><span class="nav-number">2.1.</span> <span class="nav-text">修改默认的首页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9next%E7%9A%84%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">修改next的主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9next%E7%9A%84%E8%8F%9C%E5%8D%95%E6%A0%8F"><span class="nav-number">2.3.</span> <span class="nav-text">修改next的菜单栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">标题的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E6%9B%B4%E5%A4%9A"><span class="nav-number">2.5.</span> <span class="nav-text">阅读更多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E5%B0%BE%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF"><span class="nav-number">2.6.</span> <span class="nav-text">页尾的小东西</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E5%83%8F"><span class="nav-number">2.7.</span> <span class="nav-text">头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="nav-number">2.8.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8F%92%E4%BB%B6"><span class="nav-number">2.9.</span> <span class="nav-text">加密插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#note"><span class="nav-number">2.10.</span> <span class="nav-text">Note</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comments"><span class="nav-number">2.11.</span> <span class="nav-text">comments</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#end"><span class="nav-number">3.</span> <span class="nav-text">END</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="FrenchPicnic"
-      src="/images/kawa.jpg">
-  <p class="site-author-name" itemprop="name">FrenchPicnic</p>
-  <div class="site-description" itemprop="description">There's no undo <br> and there's no repeat <br> Can't go back to <br> how we used to be</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">5</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/FrenchPicnic" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FrenchPicnic" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-12-26 14:35" pubdate>
+          2023年12月26日 下午
+        </time>
       </span>
-  </div>
-  <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+    
   </div>
 
-        </div>
-      </div>
-    </div>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.4k 字
+        
+      </span>
+    
 
     
-  </aside>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          29 分钟
+        
+      </span>
+    
 
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
 
     </div>
 
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://frenchpicnic.github.io/posts/3c9c6c7a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kawa.jpg">
-      <meta itemprop="name" content="FrenchPicnic">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FrenchPicnic's Nothing Life">
-      <meta itemprop="description" content="There's no undo <br> and there's no repeat <br> Can't go back to <br> how we used to be">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Next 使用与配置记录 | FrenchPicnic's Nothing Life">
-      <meta itemprop="description" content="本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Next 使用与配置记录
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-26 14:35:31" itemprop="dateCreated datePublished" datetime="2023-12-26T14:35:31+08:00">2023-12-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-05-07 16:45:19" itemprop="dateModified" datetime="2025-05-07T16:45:19+08:00">2025-05-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%82%E9%A1%B9/" itemprop="url" rel="index"><span itemprop="name">杂项</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-</div>
-
-            <div class="post-description">本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文</div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><blockquote>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Next 使用与配置记录</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
 <p>最近重新把博客捡起来了,准备随便写点什么东西,然后照着几个大佬的博客想整一个类似看着比较简洁的<br />
 最后主题市场逛了一圈还是用了Next,然后发现是和学校的老旧不更新的ACM校队博客用的同一个风格<br />
 主要记录下自己的相关配置啥的</p>
 </blockquote>
 <p>本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文<br />
 <span id="more"></span></p>
+<h1 id="已投入fluid的怀抱-但下面的还是可用的">已投入fluid的怀抱,
+但下面的还是可用的</h1>
 <h1 id="安装">安装</h1>
 <p>hexo的安装就不提了,相关教程实在是太多了<br />
 只看官方文档也可以很快的上手<br />
@@ -295,18 +331,18 @@ target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-star
 target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/John_Doe">John
 Doe</a>的人(搜了下才知道是无名氏的意思,大概类似于小明?)<br />
 修改这个只需要在<code>_config.yml</code>下面的site部分进行修改</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">FrenchPicnic&#x27;s</span> <span class="string">Nothing</span> <span class="string">Life</span>  <span class="comment"># 主标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span>                        <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span>                     <span class="comment"># 描述</span></span><br><span class="line"><span class="attr">keywords:</span>                           <span class="comment"># 一些关键词</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">FrenchPicnic</span>                <span class="comment"># 作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>                     <span class="comment"># 翻译的语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span>                        <span class="comment"># 使用的时区,不填默认是根据部署的服务器确定的</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># Site</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">FrenchPicnic&#x27;s</span> <span class="hljs-string">Nothing</span> <span class="hljs-string">Life</span>  <span class="hljs-comment"># 主标题</span><br><span class="hljs-attr">subtitle:</span> <span class="hljs-string">&#x27;&#x27;</span>                        <span class="hljs-comment"># 副标题</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;&#x27;</span>                     <span class="hljs-comment"># 描述</span><br><span class="hljs-attr">keywords:</span>                           <span class="hljs-comment"># 一些关键词</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">FrenchPicnic</span>                <span class="hljs-comment"># 作者</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>                     <span class="hljs-comment"># 翻译的语言</span><br><span class="hljs-attr">timezone:</span> <span class="hljs-string">&#x27;&#x27;</span>                        <span class="hljs-comment"># 使用的时区,不填默认是根据部署的服务器确定的</span><br></code></pre></td></tr></table></figure>
 <p>说一下language,默认是en,结果修改为zh后发现变成了个奇怪的语言<br />
 最后发现是要改成<code>zh-CN</code>,和其他地方的配置有点出入</p>
 <h2 id="修改next的主题">修改next的主题</h2>
 <p>next一共提供了4种风格的页面,可以进行切换,在<code>_config.next.yml</code>中进行修改<br />
 之后对于next部分的修改,都在<code>_config.next.yml</code>中进行修改,<del>懒得打字了</del><br />
 找到Schemes</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-meta"># Schemes</span><br><span class="hljs-meta"># scheme: Muse</span><br><span class="hljs-meta"># scheme: Mist</span><br><span class="hljs-meta"># scheme: Pisces</span><br><span class="hljs-symbol">scheme:</span> Gemini<br></code></pre></td></tr></table></figure>
 <p>想要切换到哪个类型的主题,只需要注释当前的主题然后把想要改为的主题取消注释就好了,我比较喜欢最后一个Gemini</p>
 <h2 id="修改next的菜单栏">修改next的菜单栏</h2>
 <p>找到menu的部分进行修改就好了</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Menu Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="comment"># External url should start with http:// or https://</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line">  <span class="string">友链:</span> <span class="string">/links/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-link</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-comment"># ---------------------------------------------------------------</span><br><span class="hljs-comment"># Menu Settings</span><br><span class="hljs-comment"># ---------------------------------------------------------------</span><br><br><span class="hljs-comment"># Usage: `Key: /link/ || icon`</span><br><span class="hljs-comment"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.</span><br><span class="hljs-comment"># Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.</span><br><span class="hljs-comment"># External url should start with http:// or https://</span><br><span class="hljs-attr">menu:</span><br>  <span class="hljs-attr">home:</span> <span class="hljs-string">/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-home</span><br>  <span class="hljs-attr">about:</span> <span class="hljs-string">/about/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-user</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">/tags/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-tags</span><br>  <span class="hljs-attr">categories:</span> <span class="hljs-string">/categories/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-th</span><br>  <span class="hljs-attr">archives:</span> <span class="hljs-string">/archives/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-archive</span><br>  <span class="hljs-comment">#schedule: /schedule/ || fa fa-calendar</span><br>  <span class="hljs-comment">#sitemap: /sitemap.xml || fa fa-sitemap</span><br>  <span class="hljs-comment">#commonweal: /404/ || fa fa-heartbeat</span><br>  <span class="hljs-string">友链:</span> <span class="hljs-string">/links/</span> <span class="hljs-string">||</span> <span class="hljs-string">fa</span> <span class="hljs-string">fa-link</span><br><br><span class="hljs-comment"># Enable / Disable menu icons / item badges.</span><br><span class="hljs-attr">menu_settings:</span><br>  <span class="hljs-attr">icons:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">badges:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>menu一共支持三个参数,<code>Key: /link/ || icon</code> -
 key是你的菜单项的名字,如果翻译存在,则使用翻译,否则使用key,key是大小写敏感的
 -
@@ -317,7 +353,7 @@ target="_blank" rel="noopener" href="https://fontawesome.com/">Font Awesome</a><
 <p>默认给了一些配置,例如about/tags/categories/archives<br />
 默认的所有文章都会被分到archives里面去,对于其他的文件,需要在每一个的开头加上<code>type:"xxxx"</code>指明是一个对应菜单类型的文件<br />
 特别地,对于tags/categories,我们里面不需要写东西,只需要在每篇自己写的文章——即<code>source/_posts</code>下面的文章的开头加入下面的样式就可以了</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">abbrlink:</span> <span class="string">4a17b156</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">学习</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">杂项</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">xxx</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span><br><span class="hljs-attr">abbrlink:</span> <span class="hljs-string">4a17b156</span><br><span class="hljs-attr">tags:</span> <br><span class="hljs-bullet">-</span> <span class="hljs-string">学习</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">xxx</span><br><span class="hljs-attr">categories:</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">杂项</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">xxx</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">xxx</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
 <p>官方也给出了json的写法,不过感觉yml更方便点<br />
 只需要在tags/categories的后面加一个<code>- xxx</code>就好了,注意是大小写敏感的,在建立好这些之后,你的标签/分类页面就会自动生成对应的标签,点击跳转后会是一个时间轴的形式<br />
 不过不知道其他主题是怎么实现的</p>
@@ -333,7 +369,7 @@ Next在菜单栏提供了一定的友链,但很明显一般友链都会超多菜
 hexo的插件市场里有一个叫做<code>abbrlink</code>的插件,可以帮你生成一个字段来指向你的文章,这样看起来文章就很舒服了<br />
 执行这个命令之后<code>npm install hexo-abbrlink --save</code><br />
 然后在hexo的config中找到<code>permalink</code>把对应的改成下面的</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	<span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">	<span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-comment"># permalink: :year/:month/:day/:title/</span><br><span class="hljs-attr">permalink:</span> <span class="hljs-string">posts/:abbrlink/</span><br><span class="hljs-attr">abbrlink:</span><br>	<span class="hljs-attr">alg:</span> <span class="hljs-string">crc32</span>   <span class="hljs-comment">#算法： crc16(default) and crc32</span><br>	<span class="hljs-attr">rep:</span> <span class="hljs-string">hex</span>     <span class="hljs-comment">#进制： dec(default) and hex</span><br></code></pre></td></tr></table></figure>
 <p>先把原先的注释掉,你也可以直接在原有的基础上改<br />
 下面的是加密算法和进制表现形式,总之最后是以一个字符串的形式指向你的文章<br />
 然后hexo
@@ -350,7 +386,7 @@ d之后你的对应文章的开头都会多出来一个abbrlink之类的东西,�
 <p>页尾有很多奇奇怪怪的东西,比如默认的一个很突兀的红心❤️<br />
 介个也是可以修改的<br />
 在next的config里找到footer</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># Specify the year when the site was setup. If not defined, current year will be used.</span></span><br><span class="line">  <span class="comment">#since: 2021</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Icon between year and copyright info.</span></span><br><span class="line">  <span class="attr">icon:</span></span><br><span class="line">    <span class="comment"># Icon name in Font Awesome. See: https://fontawesome.com/icons</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">fa-solid</span> <span class="string">fa-meteor</span></span><br><span class="line">    <span class="comment"># If you want to animate the icon, set it to true.</span></span><br><span class="line">    <span class="attr">animated:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Change the color of icon, using Hex Code.</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#808080&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># If not defined, `author` from Hexo `_config.yml` will be used.</span></span><br><span class="line">  <span class="comment"># Set to `false` to disable the copyright statement.</span></span><br><span class="line">  <span class="attr">copyright:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line">  <span class="attr">powered:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-attr">footer:</span><br>  <span class="hljs-comment"># Specify the year when the site was setup. If not defined, current year will be used.</span><br>  <span class="hljs-comment">#since: 2021</span><br><br>  <span class="hljs-comment"># Icon between year and copyright info.</span><br>  <span class="hljs-attr">icon:</span><br>    <span class="hljs-comment"># Icon name in Font Awesome. See: https://fontawesome.com/icons</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">fa-solid</span> <span class="hljs-string">fa-meteor</span><br>    <span class="hljs-comment"># If you want to animate the icon, set it to true.</span><br>    <span class="hljs-attr">animated:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-comment"># Change the color of icon, using Hex Code.</span><br>    <span class="hljs-attr">color:</span> <span class="hljs-string">&quot;#808080&quot;</span><br><br>  <span class="hljs-comment"># If not defined, `author` from Hexo `_config.yml` will be used.</span><br>  <span class="hljs-comment"># Set to `false` to disable the copyright statement.</span><br>  <span class="hljs-attr">copyright:</span><br><br>  <span class="hljs-comment"># Powered by Hexo &amp; NexT</span><br>  <span class="hljs-attr">powered:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 <p>在这个的后面还有个icp备案相关的,不过我扔github
 page上完全不用管这个<br />
 icon就是对应的那个红心了,我这里修改为了一个陨石,可以在<a
@@ -360,7 +396,7 @@ color就是字面的颜色</p>
 <p>底下还有个powered,就是by hexo的那个,你也可以注释掉什么的</p>
 <h2 id="头像">头像</h2>
 <p>头像在next的配置设置就好了,就是图像对应的地址是在source下面新建一个images的文件夹,然后塞进去就好</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/kawa.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be displayed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-comment"># Sidebar Avatar</span><br><span class="hljs-attr">avatar:</span><br>  <span class="hljs-comment"># Replace the default image and set the url here.</span><br>  <span class="hljs-attr">url:</span> <span class="hljs-string">/images/kawa.jpg</span><br>  <span class="hljs-comment"># If true, the avatar will be displayed in circle.</span><br>  <span class="hljs-attr">rounded:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-comment"># If true, the avatar will be rotated with the cursor.</span><br>  <span class="hljs-attr">rotated:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>rounded就是把你的头像设置成圆的,rotated就是鼠标移上去之后你的头像会转一圈,还蛮好玩的</p>
 <p>还有自己的<code>description</code>啥的,需要换行的话用<code>&lt;br&gt;</code></p>
 <h2 id="文章置顶">文章置顶</h2>
@@ -380,7 +416,7 @@ target="_blank" rel="noopener" href="https://github.com/D0n9X1n/hexo-blog-encryp
 page上的源码里也是加密的,因此不太需要担心托管到静态页面的时候因为源代码需要公开导致加密没用<br />
 使用的话先<code>npm install --save hexo-blog-encrypt</code><br />
 然后在<code>_config.yml</code>里加上下面的东西</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span> <span class="comment"># 这里可以自定义提示信息,就是外面看的预览啥的</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span> <span class="comment"># 输入密码部分的自定义消息</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码A</span>&#125; <span class="comment"># 对于指定的tag,都会使用对应的密码进行加密</span></span><br><span class="line">  <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">tagName</span>, <span class="attr">password:</span> <span class="string">密码B</span>&#125; <span class="comment"># 测试了下是按照tag顺序进行加密的,因此不会有多个tag导致加密冲突的情况</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">xray</span> <span class="comment"># 主题  </span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span> <span class="comment"># 错误密码的时候的报错</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span> <span class="comment"># 官方说这是很极端的情况下才会出现的报错,希腊奶了  </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yml"><br><span class="hljs-comment"># Security</span><br><span class="hljs-attr">encrypt:</span> <span class="hljs-comment"># hexo-blog-encrypt</span><br>  <span class="hljs-attr">abstract:</span> <span class="hljs-string">有东西被加密了,</span> <span class="hljs-string">请输入密码查看.</span> <span class="hljs-comment"># 这里可以自定义提示信息,就是外面看的预览啥的</span><br>  <span class="hljs-attr">message:</span> <span class="hljs-string">您好,</span> <span class="hljs-string">这里需要密码.</span> <span class="hljs-comment"># 输入密码部分的自定义消息</span><br>  <span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> &#123;<span class="hljs-attr">name:</span> <span class="hljs-string">tagName</span>, <span class="hljs-attr">password:</span> <span class="hljs-string">密码A</span>&#125; <span class="hljs-comment"># 对于指定的tag,都会使用对应的密码进行加密</span><br>  <span class="hljs-bullet">-</span> &#123;<span class="hljs-attr">name:</span> <span class="hljs-string">tagName</span>, <span class="hljs-attr">password:</span> <span class="hljs-string">密码B</span>&#125; <span class="hljs-comment"># 测试了下是按照tag顺序进行加密的,因此不会有多个tag导致加密冲突的情况</span><br>  <span class="hljs-attr">theme:</span> <span class="hljs-string">xray</span> <span class="hljs-comment"># 主题  </span><br>  <span class="hljs-attr">wrong_pass_message:</span> <span class="hljs-string">抱歉,</span> <span class="hljs-string">这个密码看着不太对,</span> <span class="hljs-string">请再试试.</span> <span class="hljs-comment"># 错误密码的时候的报错</span><br>  <span class="hljs-attr">wrong_hash_message:</span> <span class="hljs-string">抱歉,</span> <span class="hljs-string">这个文章不能被校验,</span> <span class="hljs-string">不过您还是能看看解密后的内容.</span> <span class="hljs-comment"># 官方说这是很极端的情况下才会出现的报错,希腊奶了  </span><br><br></code></pre></td></tr></table></figure>
 <p>当然你的文章头也可以加这些东西,官方说了文章头的优先级大于config里的配置<br />
 然后就不是用tags来指定哪些tag的时候才加密了,而是直接使用password</p>
 <p>abrstract会被自己写的description覆盖掉<br />
@@ -392,11 +428,11 @@ page上的源码里也是加密的,因此不太需要担心托管到静态页面
 target="_blank" rel="noopener" href="https://theme-next.js.org/docs/tag-plugins/note"
 class="uri">https://theme-next.js.org/docs/tag-plugins/note</a><br />
 大概效果可以参考收藏页面<br />
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bootstrap callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bootstrap callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">flat</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">note:</span><br>  <span class="hljs-comment"># Note tag style values:</span><br>  <span class="hljs-comment">#  - simple    bootstrap callout old alert style. Default.</span><br>  <span class="hljs-comment">#  - modern    bootstrap callout new (v2-v3) alert style.</span><br>  <span class="hljs-comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br>  <span class="hljs-comment">#  - disabled  disable all CSS styles import of note tag.</span><br>  <span class="hljs-attr">style:</span> <span class="hljs-string">flat</span><br>  <span class="hljs-attr">icons:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br>  <span class="hljs-comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span><br>  <span class="hljs-attr">light_bg_offset:</span> <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 style默认是simple,默认带图标,modern和flat都是不带图标的,flat的背景色浅一些,modern的背景色深一些<br />
 把icons设成true的话这两个也会带了<br />
 最后的light_bg_offset是背景色的偏移量,默认是0,看喜好了</p>
-<h2 id="comments">comments</h2>
+<h2 id="comments" lazyload>comments</h2>
 <p>评论官方内置只有那么几种<code>disqus | disqusjs | changyan | livere | gitalk | utterances</code><br />
 其中几种又是不支持githubpage的,所以只能用gitalk和utterances<br />
 <del>怎么还有国内的评论站啊楽</del></p>
@@ -413,7 +449,7 @@ target="_blank" rel="noopener" href="https://github.com/apps/utterances"
 class="uri">https://github.com/apps/utterances</a><br />
 也是在配置yml里填上对应的仓库啥的</p>
 <p>其他的话,在不需要comment的页面的Front-matter部分加上下面的就好了
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line"><span class="section">comments: false # 这一个</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: 404<br><span class="hljs-section">comments: false # 这一个</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
 另一个问题是它的issue是以describe或者more前面的内容来创建的,所以对那些友链之类的页面可能需要写一个describe来简略一下</p>
 <h1 id="end">END</h1>
 <p>大概就这些了,自己也没想法去整花活啥的<br />
@@ -428,120 +464,455 @@ target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">Hex
 target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面优化
 - Yuleo的文章 - 知乎</a></p>
 
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%9D%82%E9%A1%B9/" class="category-chain-item">杂项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%9D%82%E9%A1%B9/" class="print-no-link">#杂项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Next 使用与配置记录</div>
+      <div>http://frenchpicnic.github.io/posts/3c9c6c7a/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>FrenchPicnic</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年12月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'FrenchPicnic/FrenchPicnic.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
     </div>
 
-    
-    
-    
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
 
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E6%9D%82%E9%A1%B9/" rel="tag"># 杂项</a>
-          </div>
 
-        
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/c262e439/" rel="next" title="2023年终总结">
-                  2023年终总结 <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
+  
 
-    <div class="comments utterances-container"></div>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+    
+
+    
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 2023 – 
-    <span itemprop="copyrightYear">2025</span>
-    <span class="with-love">
-      <i class="fa-solid fa-meteor"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">FrenchPicnic</span>
-  </div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>
-
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
-
-
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"FrenchPicnic/FrenchPicnic.github.io","issue_term":"pathname","theme":"github-light"}</script>
-<script src="/js/third-party/comments/utterances.js"></script>
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
