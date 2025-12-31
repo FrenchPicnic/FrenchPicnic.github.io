@@ -46,7 +46,7 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
 <p>然后学到了直接上传的图片可以用<code>../../image/xxxxx.png</code>来代替,因为用了加密插件所以路径要多套一层<br />
 懒得找图床了()</p>
 <h3 id="section-3">2025-05-23</h3>
-<p>写wp的时候发现<code>&#123;</code>和<code>#</code>的组合会导致之后的内容无法渲染<br />
+<p>写wp的时候发现<code>{</code>和<code>#</code>的组合会导致之后的内容无法渲染<br />
 https://hexo.io/docs/troubleshooting#Template-render-error</p>
 <p>解决方案是加三个反引号包裹起来,但还是很迷</p>
 <h3 id="section-4">2025-07-08</h3>
@@ -64,16 +64,6 @@ href="https://www.zywvvd.com/notes/hexo/website/48-hexo-hide/hexo-hide/#hexo-gen
       <tags>
         <tag>杂项</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>置顶</title>
-    <url>/posts/cc4d5834/</url>
-    <content><![CDATA[<blockquote>
-<p>博主在跨学各种方向ing, 目前会有很多CTF或安全相关的笔记和wp<br />
-但频次可能太高,也有一些复现之类的,所以博主会主动设置为隐藏(首页不可见)<br />
-因此整了个导航栏,你也可以通过标签或者搜索看看</p>
-</blockquote>
-]]></content>
   </entry>
   <entry>
     <title>2023年终总结</title>
@@ -210,6 +200,16 @@ href="https://www.zywvvd.com/notes/hexo/website/48-hexo-hide/hexo-hide/#hexo-gen
       <tags>
         <tag>日常</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>置顶</title>
+    <url>/posts/cc4d5834/</url>
+    <content><![CDATA[<blockquote>
+<p>博主在跨学各种方向ing, 目前会有很多CTF或安全相关的笔记和wp<br />
+但频次可能太高,也有一些复现之类的,所以博主会主动设置为隐藏(首页不可见)<br />
+因此整了个导航栏,你也可以通过标签或者搜索看看</p>
+</blockquote>
+]]></content>
   </entry>
   <entry>
     <title>Next 使用与配置记录</title>
@@ -384,50 +384,6 @@ href="https://zhuanlan.zhihu.com/p/618864897">Hexo+Next博客背景图片+界面
       </tags>
   </entry>
   <entry>
-    <title>Obsidian+HEXO配置博客</title>
-    <url>/posts/4dcd95ef/</url>
-    <content><![CDATA[<blockquote>
-<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
-</blockquote>
-<span id="more"></span>
-<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
-<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
-但typora也只适合用来写单文件,最后就试试obs了</p>
-<h4 id="基本的">基本的</h4>
-<p>如果是第一次配置hexo的话还是使用终端方便点<br />
-配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
-注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
-不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
-<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
-所以需要下一个第三方插件<code>Shell commands</code>,
-加上我是Windows环境,下完插件后新建两个命令就好了</p>
-<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo clean<br>hexo s<br>start &#x27;http://localhost:4000&#x27;<br></code></pre></td></tr></table></figure></p>
-<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure></p>
-<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
-<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
-以及没有明显的终端回显</p>
-<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
-<p>用obs比vscode的优势大概就是</p>
-<h4 id="一些进阶">一些进阶</h4>
-<p>主要是在学<code>shell commands</code><br />
-原生Obs并没有提供直接执行终端命令的方法<br />
-所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
-要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
-或者把一般的文章放到日记里去,就可以一键生成了</p>
-<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
-<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
-TODO: <a
-href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
-class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024年终总结</title>
     <url>/posts/bf11e261/</url>
     <content><![CDATA[<figure>
@@ -491,6 +447,161 @@ bot的好处就是不需要担心相处，代价就是很容易被替换XD<br />
 <h1 id="future">Future</h1>
 <p>hmm，总之先把浏览器里每次打开都充满的标签页给干掉吧<br />
 马上就是充满未知的未来了</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Obsidian+HEXO配置博客</title>
+    <url>/posts/4dcd95ef/</url>
+    <content><![CDATA[<blockquote>
+<p>最近又双想起来自己有个博客的事情了,于是随便写点啥</p>
+</blockquote>
+<span id="more"></span>
+<p>这篇文章是Next学习的后续,所以忽略一些大条件(配置啥的)了</p>
+<p>主要是一直用vscode写文章也没那么方便,有的时候只用显示下预览不需要其他插件之类的云云<br />
+但typora也只适合用来写单文件,最后就试试obs了</p>
+<h4 id="基本的">基本的</h4>
+<p>如果是第一次配置hexo的话还是使用终端方便点<br />
+配置好之后只需要使用obs将blog的文件夹设置为仓库就好了<br />
+注意到默认情况下只会用到source里的内容,可以在<code>设置-文件与链接-忽略文件</code>这里把<code>node_modules</code>之类的丢进去,甚至只留个source都行<br />
+不过需要用到模板,就顺便保留<code>scaffolds</code>了</p>
+<p>平常用vsc写博客的话预览和发布都是要输命令的,obs没自带的终端来执行命令<br />
+所以需要下一个第三方插件<code>Shell commands</code>,
+加上我是Windows环境,下完插件后新建两个命令就好了</p>
+<p>用来预览的 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo clean<br>hexo s<br>start &#x27;http://localhost:4000&#x27;<br></code></pre></td></tr></table></figure></p>
+<p>用来自动发布Git的 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure></p>
+<p>然后<code>ctrl+p</code>输入对应的命令名字就好了</p>
+<p>遗留的问题是开启4000预览后没命令手动关闭,虽然有动态修改但还是很膈应,关obs就好了<br />
+以及没有明显的终端回显</p>
+<p>如果不使用hexo自带的一键部署的话,就用<code>Obsidian GIT</code>插件自己提交就好了</p>
+<p>用obs比vscode的优势大概就是</p>
+<h4 id="一些进阶">一些进阶</h4>
+<p>主要是在学<code>shell commands</code><br />
+原生Obs并没有提供直接执行终端命令的方法<br />
+所以一般的新建文章<code>hexo new [scaffolds] [title]</code>会很麻烦,要么起个终端写一个<br />
+要么曲线救国,在设置里把<code>scaffolds</code>放到模板里去,然后新建一个笔记再嵌入模板<br />
+或者把一般的文章放到日记里去,就可以一键生成了</p>
+<p>唯一的问题就是标题得手动打一次,一些设置也需要手动改,和vsc也没差了</p>
+<p>在<code>shell commands</code>有一个<code>Prompts</code>的可视化功能,可以稍微帮助一点<br />
+TODO: <a
+href="https://publish.obsidian.md/shellcommands/Preactions/Prompts"
+class="uri">https://publish.obsidian.md/shellcommands/Preactions/Prompts</a></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025年终总结</title>
+    <url>/posts/62873be4/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>依旧是选歌选半天的一年<br />
+怎么有人博客一年到头只更新年终和折腾博客记录的,太神经了)))<br />
+取材了几个年终后随便选了几个方向看看自己这一年<br />
+自己依旧不知道什么时候用逗号什么时候用句号</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=5216566&amp;auto=0&amp;height=66">
+</iframe>
+<h1 id="冲浪">冲浪</h1>
+<p>x那边已经完全没经营了,一方面推送越来越烂、虽然看别人发互相贴贴挺好但一路刷下来全是贴贴也太污染了、想看点日常也没有、最后逃避到小号每天刷工作类和AI灌水bot自己内耗,另一方面也不知道发啥了、有网络社交欲望淡了不少的原因,更多的是完全没有好发的东西,锐评自己也不会卡在那了</p>
+<p>tg旧频道archive了,开了个新的也不知道发啥,跟风建了个指路牌打了一大堆字假装很酷,最后还是看着很小孩.
+现在只留了个新频道的link,偶尔发点东西,但感觉也没啥人看<br />
+本来还想着建个tech类发一些自己的学习笔记,结果笔记也咕咕了<br />
+最后就是往垃圾桶里倒日常.jpg
+不过加了一些学到了很多知识的群,也算不错吧</p>
+<p>bsky也是好早跟风去的,不过最近自己又捡起来发一些东西,虽然中午推送还是很烂——为啥给我推送奇怪亲嘴图</p>
+<p>最后是在一个校内的网站上开了个日常贴,偶尔有人回但大多都是reaction一下,不过这样也挺好的,有助精神状态</p>
+<h1 id="学习">学习</h1>
+<p>说好的书签栏还是没一个都没清理,明年一定)<br />
+面经啥的也没动，上半年过于萎靡不振了<br />
+不过年中的时候借着Ma老师的小群里的人问了下实习相关的事情,
+最后跑到PLCT的j139给mbt干活了——正好去年参加了比赛混了个阳光普照奖跳过了面试,
+避免po没刷lc倒在第一关算法关的情况</p>
+<p>实习基本是线上干活, 完成一些社区下发的任务之类的,
+实习工资不高但给我的成就感还是蛮足的,
+也为下半年愈发好转的精神状态打下了基础</p>
+<p>8月多的时候报名了今年的比赛, 然后被带着组队去玩了圈茶歇,
+虽然最后名次不及自己和团队的预期, 不过大家都没太大怨言,
+最多说了句预期太高了<br />
+虽然最后自己不一定会用这个干活,这半年和不少人聊天学到的东西还是蛮有用的</p>
+<p>年中还有个OSPP和腾讯的犀牛鸟, 前者和项目导师来回发了几封邮件,
+基本就差把代码实现了, 最后得到了个还算肯定的回复就没继续推进,
+结果落选了<br />
+看了下最后的入选申请书, 和我的相比就是把代码直接实现了一遍,
+等于直接提pr了(), 狠狠反思<br />
+可惜明年不一定有学生认证, 规则要求期间都是学生来着, 该试试GSOC了</p>
+<p>犀牛鸟则是社会的手腕黑暗基米学, 我按照规矩严格等issue开放,
+刷新了10分钟页面发现怎么都有人领到了, 结果是issue单纯没有link到表格里,
+实际早就开在那里了<br />
+更黑暗的是有人10h前就占了位置, 因为要求是先到先占坑,
+所以后来排的基本轮不到了,
+我一开始抱着那个提前占坑的人没有及时修改好认领格式申请了一遍,
+刷新了几次issue后发现那个占坑的已经修正了认领格式, 黑暗的手腕<br />
+总之组织很混乱, 但别人要的就是热度, 好多项目在这之前都没听过</p>
+<p>后来看了下那个占坑的, 确实写完了, 自己也就没好酸的地方了</p>
+<h1 id="生活">生活</h1>
+<p>上半年纯neet, 除了吃饭洗漱几乎不会离开电脑前一步,
+每天刷各种社交媒体麻痹自己,
+偶尔刷一些技术相关转发到小群里浅浅讨论下<br />
+暑假的时候正好发了第一笔实习工资, 读研的友人也正好回来回家+过生日,
+自己就邀请友人先在这边住一天<br />
+友人说要不干脆去他那边玩几天, 思索再三(其实并没有)后就果断答应了<br />
+在最热的夏天去友人那边玩了一周, 虽然也是每天宅他家里, 3点睡中午起,
+然后他玩他的我玩我的, 偶尔一起来几把lolm,
+或者是去看他在追啥剧和v之类的<br />
+但很安心(?), 也许是几乎一线的日常有了点变数吧<br />
+不过在他家吃完晚饭几乎都要出去散步, 对我来说还是有点懒了——真的好撑</p>
+<p>送他回学校后暑假又回老家呆了段时间, 因为枕头不咋地所以睡的很晚,
+其他基本也没变数了</p>
+<p>11月跑深圳去比赛了, 虽然官方报销但也就往返和一晚酒店,
+压根没啥地方玩<br />
+不过问了些去过的人好像也没地方能去, 就单纯吃当地美食,
+要是能多报销几天也跑港玩玩<br />
+见了下这段时间线上实习共事的同事(?), 后来因为自己社恐也没咋继续聊天,
+不过了解了下不同人的情况和分享的经验, 也挺好的</p>
+<p>12月底和友人约好了过来玩几天, 先在学校的社团过了圣但活动,
+认识了些只在社团氵群见过的ID, 捡回了不少归属感<br />
+最后还蹭了顿今年的招新饭, 好吃的</p>
+<p>和友人就是纯干饭了, 喊他出来了一次看阿凡达, 结果坐大牢(指时长),
+最后他差点赶不上车<br />
+于是后来就是我去他那边玩,
+虽然也就是吃饭——去他宿舍宅着——吃晚饭回去的公式日常<br />
+在他那边看了一次国语版疯狂动物城, 画面蛮不错所以抵消了国配的尴尬感,
+虽然主要是在看他打lolm, 小孩真的多<br />
+然后一个夜黑风高的日子假装自己去上厕所再也不回来了</p>
+<p>这么想实习的工资也基本用来干饭了)</p>
+<h1 id="吃土">吃土</h1>
+<p>买了不少奇怪小玩意, 但大头都是干饭(花钱没轻没重的)<br />
+最大的大概是从matebook换到鸡哥了, 适应了新的键盘大小按键触感和分辨率后,
+偶尔打开旧电脑感觉恍如隔世<br />
+毕竟也用了4年多了</p>
+<p>本来想着年末换台更好的, 但中间有段时间摸太狠实习任务没干多少米少少,
+加上没存下来钱还打算出去玩, 就没买新的<br />
+自己也没多大需求,下了几个大游戏就没啥了</p>
+<p>买了丝之鸽, 一直没动, 也许是给那个开着CE玩盗版空洞的日子补个票吧</p>
+<h1 id="展望">展望</h1>
+<p>主线应该就是找个正经班上了, 不管是远程还是坐班<br />
+不过在那之前还是要狠狠提升自己的水平</p>
+<p>升学之类的现在有点面临时间带来的性价比问题,
+自己也不清楚到底是为了学历找到更好的工作还是单纯想钻研些什么,
+但总要归于多学点东西不会似的环节</p>
+<p>其他的大概是给tml写个自己的模组, 其实该今年就开工的,
+但145都要更了干脆拖到明年了<br />
+本来还想给蔚蓝作点图, 但自己就常态酱二不稳定酱三的散步水平,
+估计只能卷美术XD</p>
+<p>社交大概多踏出几步吧, 今年没认识多少人(单方面的),
+面对聊天框的怯战还是客服不能</p>
+<h1 id="总结">总结</h1>
+<p>总之就到这里了, 写着写着发现好多碎片化的回忆实在聚集不起来,
+感觉自己还是个neet, 没啥进步, 也没有什么值得骄傲的,
+但至少精神状态比去年好多了, 期待明年吧</p>
 ]]></content>
       <categories>
         <category>日常</category>
