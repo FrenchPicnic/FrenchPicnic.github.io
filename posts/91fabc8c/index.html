@@ -21,13 +21,13 @@
   
     <meta name="description" content="在友人的怂恿下买了台小vps, 瞎折腾扩宽下技术栈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vps日记">
+<meta property="og:title" content="vps折腾日记">
 <meta property="og:url" content="http://frenchpicnic.github.io/posts/91fabc8c/index.html">
 <meta property="og:site_name" content="FrenchPicnic&#39;s Nothing Life">
 <meta property="og:description" content="在友人的怂恿下买了台小vps, 瞎折腾扩宽下技术栈">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-04T11:44:48.000Z">
-<meta property="article:modified_time" content="2026-03-04T12:23:06.865Z">
+<meta property="article:modified_time" content="2026-03-04T13:07:59.811Z">
 <meta property="article:author" content="FrenchPicnic">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="杂项">
@@ -35,7 +35,7 @@
   
   
   
-  <title>vps日记 - FrenchPicnic&#39;s Nothing Life</title>
+  <title>vps折腾日记 - FrenchPicnic&#39;s Nothing Life</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vps日记"></span>
+            <span id="subtitle" data-typed-text="vps折腾日记"></span>
           
         </div>
 
@@ -250,7 +250,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11 字
+          871 字
         
       </span>
     
@@ -261,7 +261,7 @@
         
         
         
-          1 分钟
+          8 分钟
         
       </span>
     
@@ -298,13 +298,46 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">vps日记</h1>
+            <h1 id="seo-header">vps折腾日记</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="section"></h1>
-<p>应该是最后一次测试github hook了</p>
+                <h1 id="折腾进行时ing">折腾进行时ing</h1>
+<p>博主纯小白, 所以大部分时候都在和ai对话执行操作<br />
+纯记录向</p>
+<h2 id="同步更新博客">同步更新博客</h2>
+<p>饺子醋这一块<br />
+因为买了vps自然就要买域名,所以听友人的去spaceship淘了一个数字域名和icu,
+一个用来内部七七八八的服务, 一个用来对外的博客和以后瞎折腾的小东西</p>
+<p>总之想和别人一样把博客绑定到自己的域名上,虽然github提供了直接自定义域名的方法,
+反正不酷.jpg, 最后搜了下有个利用github的webhook的方式, 效果就是本地hexo
+d后github检测到push和vps说一声, 然后那边自动拉取最新的博客</p>
+<p>总之先是安装下webhook<br />
+后面的脚本基本是和ai问的了 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt install -y webhook<br></code></pre></td></tr></table></figure></p>
+<p>因为用的是面板一键操作的, 建站证书都一键了, 没学到啥
+接着去网站根目录下git init一下, 顺便设置remote
+origin为自己的博客仓库<br />
+在写两个脚本, 分别对应监听github的hook和执行脚本</p>
+<p>执行脚本<code>deploy-blog.sh</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># ===== 博客自动部署脚本 =====</span><br><span class="hljs-comment"># 作用：当 GitHub 推送代码后，自动更新服务器上的博客文件</span><br><br><span class="hljs-comment"># 定义变量（请根据你的实际情况修改）</span><br>BLOG_DIR=<span class="hljs-string">&quot;博客存放目录&quot;</span>           <span class="hljs-comment"># 你的博客静态文件存放目录（重要！）</span><br>LOG_FILE=<span class="hljs-string">&quot;log存放目录&quot;</span><br><br><span class="hljs-comment"># 开始部署</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(date)</span>: 博客部署开始&quot;</span> &gt;&gt; <span class="hljs-variable">$LOG_FILE</span><br><br><span class="hljs-comment"># 进入博客目录</span><br><span class="hljs-built_in">cd</span> <span class="hljs-variable">$BLOG_DIR</span> || &#123;<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(date)</span>: 错误：无法进入目录 <span class="hljs-variable">$BLOG_DIR</span>&quot;</span> &gt;&gt; <span class="hljs-variable">$LOG_FILE</span><br>    <span class="hljs-built_in">exit</span> 1<br>&#125;<br><br><span class="hljs-comment"># 拉取最新代码（假设你的博客是通过 Git 管理的）</span><br>git pull origin main&gt;&gt; <span class="hljs-variable">$LOG_FILE</span> 2&gt;&amp;1<br><br><span class="hljs-comment"># 如果你的博客需要生成（比如 Hexo 在服务器端生成），取消下面两行的注释</span><br><span class="hljs-comment"># npm install &gt;&gt; $LOG_FILE 2&gt;&amp;1</span><br><span class="hljs-comment"># npx hexo generate &gt;&gt; $LOG_FILE 2&gt;&amp;1</span><br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(date)</span>: 博客部署完成&quot;</span> &gt;&gt; <span class="hljs-variable">$LOG_FILE</span><br></code></pre></td></tr></table></figure></p>
+<p>监听配置文件<code>webhook.json</code> <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">[</span><br>  <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;deploy-blog&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;execute-command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/opt/webhook-scripts/deploy-blog.sh&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;command-working-directory&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/opt/webhook-scripts&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;response-message&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;博客部署任务已触发&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;trigger-rule&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;match&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;payload-hmac-sha256&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;secret&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;一个密码,在github webhook要用到&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;parameter&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>          <span class="hljs-attr">&quot;source&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;header&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;X-Hub-Signature-256&quot;</span><br>        <span class="hljs-punctuation">&#125;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">]</span><br></code></pre></td></tr></table></figure></p>
+<p>接着创建一个service作为系统服务一直运行 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Unit]</span><br><span class="hljs-attr">Description</span>=Webhook 监听服务<br><span class="hljs-attr">After</span>=network.target<br><br><span class="hljs-section">[Service]</span><br><span class="hljs-attr">ExecStart</span>=/usr/bin/webhook -hooks /etc/webhook/hooks.json -port xxxx -verbose<br><span class="hljs-attr">Restart</span>=always<br><span class="hljs-attr">User</span>=root<br><br><span class="hljs-section">[Install]</span><br><span class="hljs-attr">WantedBy</span>=multi-user.target<br></code></pre></td></tr></table></figure></p>
+<p>然后启动服务四件套 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl daemon-reload<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> webhook<br><span class="hljs-built_in">sudo</span> systemctl start webhook<br><span class="hljs-built_in">sudo</span> systemctl status webhook<br></code></pre></td></tr></table></figure></p>
+<p>然后反代下webhook的服务,
+接着去github对应的仓库的setting里找webhook<br />
+Payload填自己的webhook地址
+<code>xxxxx/hooks/xxxx.sh(对应仓库的执行sh)</code>
+密码填之前json里对应的密码<br />
+type博主用的是<code>x-www</code>, <del>反正ai是这么说的</del></p>
+<p>这样一般就好了, 首次设置好github的部分会自动ping一下, 左边打勾了就行,
+如果没有就看下github的日志是不是url写错了<br />
+或者去vps上看看log <code>sudo tail -f 前面写的log地址</code>,
+一般都是没有设置好git或者是没有设置remote origin</p>
+<p>博主踩坑的点就是没有设置好git和remote origin, 一般这样就好了
+反正是问的ai脚本还在学习</p>
+<p>之后同步更新其他仓库就是复制下执行脚本,
+然后json里也复制一遍改下id和密码就好了<br />
+不过应该不局限于更新博客, 以后再折腾别的</p>
 
                 
               </div>
@@ -331,7 +364,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vps日记</div>
+      <div>vps折腾日记</div>
       <div>http://frenchpicnic.github.io/posts/91fabc8c/</div>
     </div>
     <div class="license-meta">
